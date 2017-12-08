@@ -70,6 +70,8 @@ img
   margin: auto
 .text-blue
   color: $blue
+.text-gray
+  color: $light-gray
 .text-green
   color: $green
 .title
@@ -92,6 +94,7 @@ img
   border: 1px solid $white
   border-radius: 18px
   color: $white
+  padding: 5px 24px
 .icon-next-page 
   margin-left: 10px
 .banner-footer
@@ -122,3 +125,41 @@ img
     left: 0
     right: 0
     z-index: 1
+.character-input
+  border-radius: 25px
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1)
+  // border: solid 1px $gray-input
+  padding: 25px
+  margin: 29px 0
+.btn-disables
+  color: $disable
+  border: 1px solid $disable
+  position: relative
+  margin: 40px 0 50px
+  background: $white
+  // &:after
+  //   content: '' 
+  //   position: absolute
+  //   top: -2px
+  //   bottom: -2px
+  //   left: -2px
+  //   right: -2px
+  //   border-radius: 18px
+  //   background: linear-gradient(112deg, #bbbbbb, #dddddd)
+  //   z-index: -1
+.btn-solution 
+  color: $blue
+  position: relative
+  background: $white
+  margin-top: 30px
+  &:after 
+    content: ''
+    position: absolute
+    background: linear-gradient(104deg, #01d47e, #0095ff)
+    border: 1px solid transparent
+    border-radius: 18px
+    top: -2px
+    bottom: -2px
+    left: -2px
+    right: -2px
+    z-index: -1
