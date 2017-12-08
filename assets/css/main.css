@@ -933,7 +933,7 @@ a, a:hover, a:hover:active, a:active, a:focus {
   text-decoration: none; }
 
 span {
-  font-size: 14px;
+  font-size: 15px;
   color: #424242; }
 
 ul li {
@@ -1006,6 +1006,9 @@ img {
 
 .text-right {
   text-align: right; }
+
+.margin {
+  margin-top: 30px; }
 
 .center {
   width: 50%;
@@ -1305,3 +1308,21 @@ header {
     margin-top: 40px; }
   #contact .inner p {
     font-size: 14px; }
+
+#company hr {
+  background-image: linear-gradient(to right, #01d47e, #0095ff);
+  height: 2px;
+  border: 0;
+  margin: 80px 0 60px; }
+
+#company .top-content {
+  background: #1b2536;
+  color: #FFF;
+  padding: 150px 0 80px; }
+  #company .top-content p {
+    font-size: 24px; }
+  #company .top-content span {
+    color: #FFF; }
+
+#company .bot-content {
+  padding: 60px 0; }
