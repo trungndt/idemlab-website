@@ -13,13 +13,22 @@
   %body.home
     %section
       .section-banner
-        .menu-top
-          %ul
-            %li.content-menu Solutions
-            %li.content-menu Company
+        %nav.menu-top
+          %ul.menu-1
+            %li.content-menu
+              %a{href:"#"} Login
+            %li.content-menu
+              %a{href:"#"} Support
+          %ul.menu-2
             %li.content-menu 
-              %img.logo{src:"assets/images/logo/logo-white.png"}
-            %li.content-menu Contact
+              %a{herf:"#"} Solutions
+            %li.content-menu 
+              %a{herf:"#"} Company
+            %li.content-menu 
+              %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white.png"}
+            %li.content-menu 
+              %a{herf:"#"} Contact
         %a.btn.btn-menu{href:"#"} SIGN UP FREE
           %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
         .caption.bg-oval
@@ -36,13 +45,17 @@
       %nav.menu-home
         %ul
           %li.content-menu 
-            %img.logo{src:"assets/images/logo/logo-white.png"}
-          %li.content-menu Solutions
-          %li.content-menu Company
-          %li.content-menu Contact
+            %a{href:"#"}
+              %img.logo{src:"assets/images/logo/logo-white.png"}
+          %li.content-menu 
+            %a{href:"#"} Solutions
           %li.content-menu
-            %a.btn.btn-menu{href:"#"} SIGN UP FREE
-              %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+            %a{href:"#"} Company
+          %li.content-menu 
+            %a{href:"#"} Contact
+          %li.content-menu
+            %a.btn.btn-main{href:"#"} SIGN UP FREE
+              %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
     %section
       #solution
         %h2 Our Solutions
@@ -56,15 +69,15 @@
                   which improves efficiency, revenue and 
                   %br
                   customer experience.
-                %a.btn.btn-solution{href:"#"} POWER-UP YOUR RESERVATIONS
+                %a.btn.btn-main{href:"#"} POWER-UP YOUR RESERVATIONS
                   %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
             .d-tbl-cell
               .img-solution-right
-                %img{src:"assets/images/img/img-main.png"}
+                %img{src:"assets/images/img/home-idemgroup.jpg"}
           .d-tbl
             .d-tbl-cell
               .img-solution-left
-                %img{src:"assets/images/img/img-dashboad.png"}
+                %img{src:"assets/images/img/home_idemevents.png"}
             .d-tbl-cell.width-text
               .text-content
                 %h3 IdemEvents
@@ -76,7 +89,7 @@
                   %br 
                   insights into the ROI of events and 
                   %br improving customer loyalty.
-                %a.btn.btn-solution{href:"#"} DISCOVER BETTER EVENTS
+                %a.btn.btn-main{href:"#"} DISCOVER BETTER EVENTS
                   %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
     %section
       #workflows
@@ -224,8 +237,52 @@
               %p See what it's like to manage events & group reservations the 
                 %br 
                 easy way. Sign up for free now!
-               %a.btn.btn-menu{href:"#"} SIGN UP FREE
-                  %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+              %a.btn.btn-white{href:"#"} SIGN UP FREE
+                %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+    %footer
+      #subscribe
+        .content
+          .row
+            .col-md-5
+              %h3 Stay in the loop
+              %p Subscribe to get updated with our latest release and products.
+            .col-md-7
+              %input{placeholder: "Enter your email address"}
+              %span We respect your inbox, no spam!
+              %a.btn.btn-main{href:"#"} SUBSCRIBE
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+      #info-footer
+        .container.text-center
+            .row.margin-bottom.text-left
+              .col-md-4
+                %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
+                %a.btn.btn-main{href:"#"} SIGN UP FREE
+                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              .col-md-2.menu-tab
+                %p IDEM SOLUTION
+                %a{href:"#"} IdemEvents
+                %a{href:"#"} IdemGroup
+              .col-md-2.menu-tab
+                %p ABOUT US
+                %a{href:"#"} Company
+                %a{href:"#"} Partner
+              .col-md-2.menu-tab
+                %p CONNECT
+                %a{href:"#"} Blog
+                %a{href:"#"} Contact
+              .col-md-2.logo-client
+                %p FIND US AT
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-twitter.png"}
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-linkedin.png"}
+                %a{href:"#"}
+                  %img.logo{src:"assets/images/icon/icon-facebook.png"}
+            .content-bot
+              %span Privacy Policy 
+              %span.gray | 
+              %span Terms of Use
+            %p Copyright © 2017 Idem Labs Pte. Ltd.
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
 %script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}

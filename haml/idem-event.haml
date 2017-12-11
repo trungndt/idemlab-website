@@ -1,4 +1,4 @@
-  	%html
+%html
   %head
     %title Kingsmen
     %meta{charset:"utf-8"}
@@ -10,6 +10,25 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
+    .section-banner
+      %nav.menu-top
+        %ul.menu-1
+          %li.content-menu
+            %a{href:"#"} Login
+          %li.content-menu
+            %a{href:"#"} Support
+        %ul.menu-2
+          %li.content-menu 
+            %a{herf:"#"} Solutions
+          %li.content-menu 
+            %a{herf:"#"} Company
+          %li.content-menu 
+            %a{herf:"#"}
+              %img.logo{src:"assets/images/logo/logo-white.png"}
+          %li.content-menu 
+            %a{herf:"#"} Contact
+      %a.btn.btn-menu{href:"#"} SIGN UP FREE
+        %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
     #idem-group-event
       .top-content
         .container
@@ -141,7 +160,50 @@
                 easy way. Sign up for free now!
                %a.btn.btn-menu{href:"#"} SIGN UP FREE
                   %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
-               
+    %footer
+      #subscribe
+        .content
+          .row
+            .col-md-5
+              %h3 Stay in the loop
+              %p Subscribe to get updated with our latest release and products.
+            .col-md-7
+              %input{placeholder: "Enter your email address"}
+              %span We respect your inbox, no spam!
+              %a.btn.btn-main{href:"#"} SUBSCRIBE
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+      #info-footer
+        .container.text-center
+            .row.margin-bottom.text-left
+              .col-md-4
+                %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
+                %a.btn.btn-main{href:"#"} SIGN UP FREE
+                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              .col-md-2.menu-tab
+                %p IDEM SOLUTION
+                %a{href:"#"} IdemEvents
+                %a{href:"#"} IdemGroup
+              .col-md-2.menu-tab
+                %p ABOUT US
+                %a{href:"#"} Company
+                %a{href:"#"} Partner
+              .col-md-2.menu-tab
+                %p CONNECT
+                %a{href:"#"} Blog
+                %a{href:"#"} Contact
+              .col-md-2.logo-client
+                %p FIND US AT
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-twitter.png"}
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-linkedin.png"}
+                %a{href:"#"}
+                  %img.logo{src:"assets/images/icon/icon-facebook.png"}
+            .content-bot
+              %span Privacy Policy 
+              %span.gray | 
+              %span Terms of Use
+            %p Copyright © 2017 Idem Labs Pte. Ltd.          
 
   
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}

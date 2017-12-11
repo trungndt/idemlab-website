@@ -32,6 +32,7 @@ a
 	&:active,
 	&:focus
 		text-decoration: none
+		cursor: pointer
 span
 	font-size: 15px
 	color: $light-gray
@@ -101,7 +102,7 @@ img
 	padding: 10px 35px
 	display: inline
 .bg-oval
-	@include bgImage('../images/oval/Oval.png', top left, 75%)
+	@include bgImage('../images/oval/Oval.png', top left, 70%)
 .bg-white
 	background: $white
 .btn
@@ -172,6 +173,9 @@ img
 		background: linear-gradient(115deg, #01d47e, #0095ff)
 		color: #fff
 		border-color: transparent
+.btn-white
+	color: $white
+	border: 1px solid $white
 .top-content
 	background: $darkBlue
 	color: $white

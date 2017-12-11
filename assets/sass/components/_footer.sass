@@ -2,28 +2,55 @@
 /// <reference path="../globals/_variables.scss" />
 
 footer
-  padding: 20px
-  text-align: center
-  font-size: 12px
-  color: #555
-  // border-top: 1px solid #979797
-  @include prefix(box-shadow, 0 -1px 5px rgba(#555, .5))
-  .dot-divider
-    margin: 0 10px
-    &:after
+  margin-top: 5px
+  #subscribe
+    background-color: $darkBlue
+    color: $white
+  h3, span
+    color: $white  
+  span
+    font-size: 12px
+    float: left
+    margin-top: 40px
+  a 
+    color: $blue
+  input
+    width: 100%
+    padding: 14px 20px
+    border-radius: 25px
+    border: transparent
+  .content
+    width: 70%
+    margin: auto
+    padding: 40px 0
+    clear: both
+    .btn-main
+      float: right
+  #info-footer
+    padding-top: 50px
+    position: relative
+    &:before
       content: ''
-      width: 3px
-      height: 3px
-      border-radius: 50%
-      background-color: #000
-      display: inline-block
-      position: relative
-      top: -2px
-
-@include respondTo(tabletPortrait)
-  footer
-    font-size: 11px
-    .dot-divider:after
-      top: -1px
-    
-  
+      top: -5px
+      position: absolute
+      left: 0
+      background: linear-gradient(to right, #0095ff, #07dea6)
+      width: 100%
+      height: 5px
+    p 
+      color: $dark-gray
+    .menu-tab
+      a 
+        display: block
+        padding: 5px 0
+    .logo-client
+      a
+        display: inline-block
+        padding: 5px 10px
+  .content-bot
+    display: inline-block
+    span 
+      color: $blue
+      margin: 10px 10px
+    .gray 
+      color: $gray
