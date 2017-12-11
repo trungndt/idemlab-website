@@ -17,8 +17,14 @@ h3
 h2 
 	font-size: 38px
 	line-height: 1.5
+hr
+	background-image: linear-gradient(to right, #01d47e, #0095ff)
+	height: 2px
+	border: 0
+	margin: 80px 0 60px
 p 
 	font-size: 16px
+	line-height: 1.5
 a 
 	&,
 	&:hover,
@@ -160,6 +166,12 @@ img
 	position: relative
 	margin-top: 30px
 	border: 1px solid $blue
+	transition: all .2s
+	box-sizing: border-box
+	&:hover
+		background: linear-gradient(115deg, #01d47e, #0095ff)
+		color: #fff
+		border-color: transparent
 .top-content
 	background: $darkBlue
 	color: $white
@@ -170,3 +182,7 @@ img
 		color: $white
 .bot-content
 	padding: 60px 0
+
+@media (min-width: 1200px)
+	.container
+		width: 74%
