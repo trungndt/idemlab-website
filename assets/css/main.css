@@ -1354,16 +1354,22 @@ header {
 #partner .img {
   margin-bottom: 20%; }
 
-#idem-group label {
+#idem-group-event label {
   color: #0095ff;
   font-size: 16px;
   margin-bottom: 10px; }
 
-#idem-group a {
+#idem-group-event a {
   font-size: 16px;
   display: inline-block; }
 
-#idem-group .key-features {
+#idem-group-event .key-features {
   margin-top: 100px; }
-  #idem-group .key-features a {
-    margin: 40px 86px 82px; }
+  #idem-group-event .key-features h3 {
+    font-size: 25px; }
+  #idem-group-event .key-features a {
+    margin: 40px 86px 82px;
+    vertical-align: middle; }
+
+#idem-group-event .event a {
+  margin: 40px 23px 82px; }
