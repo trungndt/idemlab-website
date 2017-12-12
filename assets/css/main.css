@@ -1092,6 +1092,14 @@ img {
   position: relative;
   margin: 40px 0 50px;
   background: #FFF; }
+  .btn-disables:after {
+    content: '';
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99; }
 
 .btn-main {
   color: #0095ff;
@@ -1233,6 +1241,15 @@ footer {
     z-index: 1; }
     .home .section-banner .bg-oval .btn-text {
       margin-top: 20px; }
+
+.home .d-tbl-cell {
+  clear: fixed; }
+
+.home .img-solution-right {
+  float: right; }
+
+.home .img-solution-left {
+  float: left; }
 
 .home .menu-home {
   background: #1b2536;
@@ -1398,6 +1415,65 @@ footer {
 #idem-group-event .event a {
   margin: 40px 23px 82px; }
 
+#page-404 p {
+  font-size: 18px;
+  color: #000;
+  opacity: .6; }
+
 #page-404 a {
   font-size: 16px;
   color: #555555; }
+
+#page-404 .content {
+  padding: 10%; }
+
+#sign-up hr {
+  margin: 20px 0; }
+
+#sign-up h2 {
+  margin-top: 150px;
+  color: #FFF; }
+
+#sign-up h3 {
+  margin-top: 80px; }
+
+#sign-up tr > td:first-child {
+  width: 20%; }
+
+#sign-up td {
+  padding: 5px 0; }
+
+#sign-up .container {
+  width: 62%; }
+
+#sign-up .img {
+  margin-bottom: 10px; }
+
+#sign-up .featrue {
+  background: #FFF;
+  border-radius: 7px; }
+  #sign-up .featrue p {
+    font-size: 13px; }
+  #sign-up .featrue .inner {
+    padding: 30px; }
+
+#sign-up .group-form {
+  background: #FFF;
+  border-radius: 7px;
+  box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3); }
+
+#sign-up .inner-form {
+  width: 74%;
+  margin: auto; }
+
+#sign-up .character-input {
+  margin: 15px 0; }
+
+#sign-up .left, #sign-up .right {
+  width: 48%; }
+
+#sign-up .left {
+  margin-right: 2%; }
+
+#sign-up .right {
+  margin-left: 2%; }
