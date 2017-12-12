@@ -1129,6 +1129,9 @@ img {
 .bot-content {
   padding: 60px 0; }
 
+.dropdown-menu li {
+  float: none; }
+
 @media (min-width: 1200px) {
   .container {
     width: 74%; } }
@@ -1144,7 +1147,7 @@ img {
     z-index: 99;
     background: #f5f5f5;
     width: 100%;
-    opacity: .8;
+    opacity: .9;
     padding-right: 10%; }
     .menu-top .menu-1 a {
       font-size: 12px;
@@ -1153,6 +1156,17 @@ img {
       float: right; }
     .menu-top .menu-1 .content-menu {
       padding: 10px 15px; }
+    .menu-top .menu-1 .dropdown-menu {
+      background: #FFF; }
+      .menu-top .menu-1 .dropdown-menu li {
+        float: none;
+        padding: 0; }
+      .menu-top .menu-1 .dropdown-menu .text-gray {
+        margin-left: 15px; }
+      .menu-top .menu-1 .dropdown-menu p {
+        margin: 0; }
+    .menu-top .menu-1 .dropdown-menu > li > a {
+      padding: 0; }
   .menu-top .menu-2 {
     margin-top: 60px;
     position: absolute;
@@ -1359,6 +1373,22 @@ footer {
     margin-top: 40px; }
   #contact .inner p {
     font-size: 14px; }
+
+#company h2 {
+  margin-top: 0; }
+
+#company tr > td:first-child {
+  width: 20%; }
+
+#company tr td {
+  padding: 5px;
+  font-size: 13px; }
+
+#company .featrue {
+  padding: 10px;
+  border: 1px solid #0095ff;
+  border-radius: 7px;
+  margin-bottom: 20px; }
 
 #partner h2 {
   color: #FFF; }

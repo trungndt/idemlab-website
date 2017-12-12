@@ -1,0 +1,8 @@
+#company h2 {
+  margin-top: 0; }
+
+#company tr > td:first-child {
+  width: 20%; }
+
+#company tr td {
+  padding: 10px; }
