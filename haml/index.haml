@@ -12,7 +12,7 @@
 
   %body.home
     .section-banner
-      %nav.menu-top
+      %nav.menu-top.none
         %ul.menu-1
           %li.content-menu.dropdown{role:"presentation"}
             %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
@@ -58,47 +58,45 @@
               %img.logo{src:"assets/images/logo/logo-white.png"}
           %li.content-menu 
             %a{herf:"#"} Contact
-      %a.btn.btn-menu{href:"#"} SIGN UP FREE
+      %a.btn.btn-menu.none{href:"#"} SIGN UP FREE
         %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
       .caption.bg-oval
         %h2.margin-bottom Helping maximise revenue, productivity & customer loyalty from your meetings, events and group business.
-        %a.btn{href:"#"} SIGN UP FREE
+        %a.btn.none{href:"#"} SIGN UP FREE
+          %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+        %a.btn.none-destop{href:"#"} SIGN UP
           %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
     %section
       #solution
         %h2 Our Solutions
         .content
           .d-tbl
-            .d-tbl-cell.width-text
-              .text-content
-                %h3 IdemGroup
-                %p Stunning group reservations software
-                  %br
-                  which improves efficiency, revenue and 
-                  %br
-                  customer experience.
-                %a.btn.btn-main{href:"#"} POWER-UP YOUR RESERVATIONS
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-            .d-tbl-cell
-              .img-solution-right
-                %img{src:"assets/images/img/home-idemgroup.jpg"}
+            .img-solution-right
+              %img{src:"assets/images/img/home-idemgroup.jpg"}
+            .text-content
+              %h3 IdemGroup
+              %p Stunning group reservations software
+                %br
+                which improves efficiency, revenue and 
+                %br
+                customer experience.
+              %a.btn.btn-main{href:"#"} POWER-UP YOUR RESERVATIONS
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
           .d-tbl
-            .d-tbl-cell
-              .img-solution-left
-                %img{src:"assets/images/img/home_idemevents.png"}
-            .d-tbl-cell.width-text
-              .text-content
-                %h3 IdemEvents
-                %p Cloud-based, end to end event 
-                  %br
-                  management platform which automates 
-                  %br
-                  & optimizes event tasks, amassing 
-                  %br 
-                  insights into the ROI of events and 
-                  %br improving customer loyalty.
-                %a.btn.btn-main{href:"#"} DISCOVER BETTER EVENTS
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+            .img-solution-left
+              %img{src:"assets/images/img/home_idemevents.png"}
+            .text-content.solution-right
+              %h3 IdemEvents
+              %p Cloud-based, end to end event 
+                %br
+                management platform which automates 
+                %br
+                & optimizes event tasks, amassing 
+                %br 
+                insights into the ROI of events and 
+                %br improving customer loyalty.
+              %a.btn.btn-main{href:"#"} DISCOVER BETTER EVENTS
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
     %section
       #workflows
         %h3.text-center Workflows are improved for...
@@ -151,47 +149,43 @@
           %p Delight your customers with the simplest event & group reservations systems in the industry.
           .content
             .d-tbl
-              .d-tbl-cell.width-text
-                .text-content
-                  .icon
-                    %img{src:"assets/images/icon/icon-smile.png"}
-                  %p.text-blue DELIGHT YOUR CUSTOMERS
-                  %span A beautiful user experience.
-                    %br
-                    %br
-                    Since business is done on the run these 
-                    %br
-                    days, we’ve optimized our event & group 
-                    %br
-                    experience for mobile so that you and 
-                    %br
-                    your customers can register from 
-                    %br
-                    anywhere, at any time, on any device.
-              .d-tbl-cell
-                .img-solution-right
-                  %img{src:"assets/images/img/img-modern.png"}
+              .img-solution-right
+                %img{src:"assets/images/img/img-modern.png"}
+              .text-content
+                .icon
+                  %img{src:"assets/images/icon/icon-smile.png"}
+                %p.text-blue DELIGHT YOUR CUSTOMERS
+                %span A beautiful user experience.
+                  %br
+                  %br
+                  Since business is done on the run these 
+                  %br
+                  days, we’ve optimized our event & group 
+                  %br
+                  experience for mobile so that you and 
+                  %br
+                  your customers can register from 
+                  %br
+                  anywhere, at any time, on any device.
           %h3.title Maintain Brand Consistency
           %p We understand how important your brand is when it comes to interactions with your customers, so 
             %br
             we want to keep it front and center.
           .content
             .d-tbl
-              .d-tbl-cell.width-text
-                .text-content
-                  .icon
-                    %img{src:"assets/images/icon/icon-brand.png"}
-                  %p.text-blue CUSTOMIZE WITH YOUR BRAND
-                  %span You can easily customize your event 
+              .img-solution-right
+                %img{src:"assets/images/img/img-maintain.png"}
+              .text-content
+                .icon
+                  %img{src:"assets/images/icon/icon-brand.png"}
+                %p.text-blue CUSTOMIZE WITH YOUR BRAND
+                %span You can easily customize your event 
                   %br
                   websites and your emails with your 
                   %br
                   company identity to let your brand shine 
                   %br
                   through.
-              .d-tbl-cell
-                .img-solution-right
-                  %img{src:"assets/images/img/img-maintain.png"}
     %section
       #automate.text-center
         %h3.title Automate Workflow and Save Time
@@ -202,49 +196,26 @@
           .inner
             .icon.title
               %img{src:"assets/images/icon/icon-mail.png"}
-            %p.text-blue AUTOMATE EMAIL 
-              %br
-              COMMUNICATION
-            %span You can easily customize your event 
-            %br
-            websites and your emails with your 
-            %br
-            company identity to let your brand shine 
-            %br
-            through.
+            %p.text-blue AUTOMATE EMAIL COMMUNICATION
+            %span Personalized & automated email workflows save you time and improves the attendee experience.
           .inner
             .icon.title
               %img{src:"assets/images/icon/icon-invoicing.png"}
-            %p.text-blue AUTOMATE INVOICING 
-              %br
-              AND RECEIPTS
-            %span You can easily customize your event 
-            %br
-            websites and your emails with your 
-            %br
-            company identity to let your brand shine 
-            %br
-            through.
+            %p.text-blue AUTOMATE INVOICING AND RECEIPTS
+            %span No more manual invoicing or sending receipts, the system will manage every interaction while you work on high priory tasks.
           .inner
             .icon.title
               %img{src:"assets/images/icon/icon-report.png"}
             %p.text-blue AUTOMATE REPORTING
-            %span You can easily customize your event 
-            %br
-            websites and your emails with your 
-            %br
-            company identity to let your brand shine 
-            %br
-            through.
+            %span Click a button or slider to get the information we collect about everything. One click reports or downloads save you hors of post event reporting.
+              
     %section
       .banner-footer
         .oval-footer.text-center
           .d-tbl.height
             .d-tbl-cell
               %h3 Ready to get started?
-              %p See what it's like to manage events & group reservations the 
-                %br 
-                easy way. Sign up for free now!
+              %p.text-footer-banner See what it's like to manage events & group reservations the easy way. Sign up for free now!
               %a.btn.btn-white{href:"#"} SIGN UP FREE
                 %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
     %footer
@@ -263,7 +234,8 @@
         .container.text-center
             .row.margin-bottom.text-left
               .col-md-4
-                %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
+                .img
+                  %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
                 %a.btn.btn-main{href:"#"} SIGN UP FREE
                   %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
               .col-md-2.menu-tab

@@ -992,7 +992,8 @@ img {
 .text-content {
   text-align: left;
   width: 50%;
-  margin: auto; }
+  margin: auto;
+  padding-top: 5%; }
 
 .text-blue {
   color: #0095ff; }
@@ -1129,9 +1130,48 @@ img {
 .bot-content {
   padding: 60px 0; }
 
+.text-footer-banner {
+  width: 35%;
+  margin: auto; }
+
+@media (min-width: 1600px) {
+  h3 {
+    font-size: 40px; }
+  h2 {
+    font-size: 45px; }
+  p, .btn, span {
+    font-size: 20px; }
+  ul li {
+    font-size: 22px; }
+  .btn {
+    border-radius: 28px; } }
+
 @media (min-width: 1200px) {
   .container {
-    width: 74%; } }
+    width: 74%; }
+  .text-content {
+    width: 60%; }
+  .top-content p {
+    font-size: 30px; } }
+
+@media (min-width: 992) {
+  .none-destop {
+    display: none; } }
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 23px; }
+  h3 {
+    font-size: 20px; }
+  p {
+    font-size: 14px; }
+  .none {
+    display: none; }
+  .bg-oval {
+    background: url("../images/oval/mobile-oval.png") top left/95% no-repeat; }
+  .text-content {
+    display: table;
+    width: 90%; } }
 
 .menu-top {
   position: absolute;
@@ -1176,10 +1216,16 @@ img {
   margin-top: 0;
   background: #0095ff;
   position: absolute;
-  top: 6%;
+  top: 8%;
   right: 14%;
   border: 1px solid #0095ff;
   z-index: 99; }
+
+@media (min-width: 1600px) {
+  .btn-menu {
+    top: 6%; }
+  .menu-top a {
+    font-size: 26px; } }
 
 footer {
   margin-top: 5px; }
@@ -1194,6 +1240,8 @@ footer {
     margin-top: 40px; }
   footer a {
     color: #0095ff; }
+  footer p {
+    font-size: 16px; }
   footer input {
     width: 100%;
     padding: 14px 20px;
@@ -1304,6 +1352,11 @@ footer {
 .home #solution .content {
   text-align: center; }
 
+.home #solution .solution-right {
+  display: table;
+  float: right;
+  width: 40%; }
+
 .home #workflows {
   width: 60%;
   margin: auto;
@@ -1355,6 +1408,41 @@ footer {
   text-align: left;
   padding-left: 5%; }
 
+@media (max-width: 992px) {
+  .home .section-banner {
+    position: relative;
+    background: url("../images/bg/mobile-bg.png") top/100% no-repeat; }
+    .home .section-banner:before {
+      content: '';
+      display: block;
+      padding-top: 150%; }
+    .home .section-banner .caption {
+      padding-left: 2%;
+      padding-top: 30%; }
+      .home .section-banner .caption h2 {
+        width: 75%; }
+  .home #solution h2 {
+    margin: 40px 0 20px; }
+  .home #solution .solution-right {
+    float: none;
+    width: 90%; }
+  .home #workflows, .home #info {
+    width: 90%; }
+    .home #workflows h3, .home #info h3 {
+      font-size: 23px; }
+    .home #workflows p, .home #info p {
+      font-size: 13px; }
+  .home #automate .content {
+    width: 100%; }
+  .home #automate .inner {
+    width: 100%; }
+  .home #automate .icon {
+    width: 16%;
+    margin-top: 30px; }
+  .home .icon {
+    display: table;
+    width: 20%; } }
+
 #contact {
   color: #FFF;
   margin-bottom: 80px;
@@ -1377,6 +1465,10 @@ footer {
     margin-top: 40px; }
   #contact .inner p {
     font-size: 14px; }
+
+@media (min-width: 1600px) {
+  #contact p {
+    font-size: 24px; } }
 
 #company h2 {
   margin-top: 0; }
@@ -1433,6 +1525,10 @@ footer {
 #partner .img {
   margin-bottom: 20%; }
 
+@media (min-width: 1600px) {
+  #partner span {
+    font-size: 30px; } }
+
 #idem-group-event label {
   color: #0095ff;
   font-size: 16px;
@@ -1452,6 +1548,12 @@ footer {
 
 #idem-group-event .event a {
   margin: 40px 23px 82px; }
+
+@media (min-width: 1600px) {
+  #idem-group-event label, #idem-group-event a {
+    font-size: 20px; }
+  #idem-group-event .key-features h3 {
+    font-size: 30px; } }
 
 #page-404 p {
   font-size: 18px;
@@ -1502,7 +1604,8 @@ footer {
 
 #sign-up .inner-form {
   width: 74%;
-  margin: auto; }
+  margin: auto;
+  padding-top: 40px; }
 
 #sign-up .character-input {
   margin: 15px 0; }
@@ -1515,3 +1618,9 @@ footer {
 
 #sign-up .right {
   margin-left: 2%; }
+
+@media (min-width: 1600px) {
+  #sign-up .featrue p {
+    font-size: 20px; }
+  #sign-up .featrue .right-table {
+    padding: 30px 30px 140px; } }
