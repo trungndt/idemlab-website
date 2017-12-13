@@ -1129,9 +1129,6 @@ img {
 .bot-content {
   padding: 60px 0; }
 
-.dropdown-menu li {
-  float: none; }
-
 @media (min-width: 1200px) {
   .container {
     width: 74%; } }
@@ -1179,9 +1176,10 @@ img {
   margin-top: 0;
   background: #0095ff;
   position: absolute;
-  top: 8%;
+  top: 6%;
   right: 14%;
-  border: 1px solid #0095ff; }
+  border: 1px solid #0095ff;
+  z-index: 99; }
 
 footer {
   margin-top: 5px; }
@@ -1246,6 +1244,8 @@ footer {
     padding-top: 10%;
     padding-left: 10%;
     color: #FFF; }
+    .home .section-banner .caption h2 {
+      width: 50%; }
   .home .section-banner .bg-oval {
     position: absolute;
     top: 0;
@@ -1332,6 +1332,10 @@ footer {
     text-align: center;
     width: 50%;
     display: table; }
+  .home #workflows .border-bot-blue {
+    border-bottom: 1px solid #0095ff; }
+  .home #workflows .border-bot-green {
+    border-bottom: 1px solid #2ccda2; }
 
 .home #info {
   padding-top: 100px; }
@@ -1389,6 +1393,10 @@ footer {
   border: 1px solid #0095ff;
   border-radius: 7px;
   margin-bottom: 20px; }
+
+#company .text-link:hover, #company .text-link:hover:active, #company .text-link:active, #company .text-link:focus {
+  text-decoration: underline;
+  color: #0095ff; }
 
 #partner h2 {
   color: #FFF; }
