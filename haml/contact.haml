@@ -10,7 +10,7 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
-    .section-banner
+    .section-banner.none
       %nav.menu-top
         %ul.menu-1
           %li.content-menu.dropdown{role:"presentation"}
@@ -82,8 +82,11 @@
                 %img{src:"assets/images/icon/icon-support.png"}
               %p.text-blue SUPPORT CENTRE
               %p.text-gray Need help using Idem products?
-              %a.btn.btn-main{href:"#"}
+              %a.btn.btn-main.none{href:"#"}
                 TALK TO SUPPORT
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              %a.btn.btn-main.none-destop{href:"#"}
+                TALK TO
                 %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
             .inner.text-content
               .icon.title
@@ -108,7 +111,7 @@
               %p Subscribe to get updated with our latest release and products.
             .col-md-7
               %input{placeholder: "Enter your email address"}
-              %span We respect your inbox, no spam!
+              %p.no-spam We respect your inbox, no spam!
               %a.btn.btn-main{href:"#"} SUBSCRIBE
                 %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
       #info-footer
@@ -117,21 +120,23 @@
               .col-md-4
                 .img
                   %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-                %a.btn.btn-main{href:"#"} SIGN UP FREE
+                %a.btn.btn-main.none{href:"#"} SIGN UP FREE
                   %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-              .col-md-2.menu-tab
+                %a.btn.btn-main.none-destop{href:"#"} SIGN UP
+                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              .col-md-2.col-xs-6.menu-tab
                 %p IDEM SOLUTION
                 %a{href:"#"} IdemEvents
                 %a{href:"#"} IdemGroup
-              .col-md-2.menu-tab
+              .col-md-2.col-xs-6.menu-tab
                 %p ABOUT US
                 %a{href:"#"} Company
                 %a{href:"#"} Partner
-              .col-md-2.menu-tab
+              .col-md-2.col-xs-6.menu-tab
                 %p CONNECT
                 %a{href:"#"} Blog
                 %a{href:"#"} Contact
-              .col-md-2.logo-client
+              .col-md-2.col-xs-6.logo-client
                 %p FIND US AT
                 %a{href:"#"} 
                   %img.logo{src:"assets/images/icon/icon-twitter.png"}

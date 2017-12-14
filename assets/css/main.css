@@ -1154,7 +1154,7 @@ img {
   .top-content p {
     font-size: 30px; } }
 
-@media (min-width: 992) {
+@media (min-width: 992px) {
   .none-destop {
     display: none; } }
 
@@ -1164,14 +1164,29 @@ img {
   h3 {
     font-size: 20px; }
   p {
-    font-size: 14px; }
+    font-size: 14.5px; }
   .none {
     display: none; }
   .bg-oval {
     background: url("../images/oval/mobile-oval.png") top left/95% no-repeat; }
   .text-content {
     display: table;
-    width: 90%; } }
+    width: 90%; }
+  .banner-footer {
+    position: relative;
+    background: url("../images/oval/mobile-signup.png") center/cover no-repeat; }
+    .banner-footer:before {
+      content: '';
+      display: block;
+      padding-top: 87.5%; }
+    .banner-footer .oval-footer {
+      background: none; }
+  .text-footer-banner {
+    width: 80%; }
+  .character-input {
+    padding: 10px; }
+  .btn-disables {
+    margin: 0 0 50px; } }
 
 .menu-top {
   position: absolute;
@@ -1234,10 +1249,6 @@ footer {
     color: #FFF; }
   footer h3, footer span {
     color: #FFF; }
-  footer span {
-    font-size: 12px;
-    float: left;
-    margin-top: 40px; }
   footer a {
     color: #0095ff; }
   footer p {
@@ -1254,6 +1265,11 @@ footer {
     clear: both; }
     footer .content .btn-main {
       float: right; }
+    footer .content .no-spam {
+      font-size: 12px;
+      float: left;
+      margin-top: 40px;
+      opacity: .5; }
   footer #info-footer {
     padding-top: 50px;
     position: relative; }
@@ -1280,6 +1296,16 @@ footer {
       margin: 10px 10px; }
     footer .content-bot .gray {
       color: #555555; }
+
+@media (max-width: 992px) {
+  footer input {
+    padding: 10px; }
+  footer .content {
+    width: 90%; }
+    footer .content .btn-main, footer .content .no-spam {
+      float: none; }
+  footer #info-footer .menu-tab, footer #info-footer .logo-client {
+    margin-top: 30px; } }
 
 .home .section-banner {
   position: relative;
@@ -1467,8 +1493,20 @@ footer {
     font-size: 14px; }
 
 @media (min-width: 1600px) {
-  #contact p {
-    font-size: 24px; } }
+  #contact {
+    padding-top: 50px; }
+    #contact p {
+      font-size: 24px; } }
+
+@media (max-width: 992px) {
+  #contact {
+    padding-top: 50px; }
+    #contact .content {
+      width: 95%; }
+    #contact .form-content .group-form {
+      width: 90%; }
+    #contact .text-center > .inner {
+      margin-top: 0; } }
 
 #company h2 {
   margin-top: 0; }
@@ -1624,3 +1662,11 @@ footer {
     font-size: 20px; }
   #sign-up .featrue .right-table {
     padding: 30px 30px 140px; } }
+
+@media (max-width: 992px) {
+  #sign-up h2 {
+    text-align: left; }
+  #sign-up .container, #sign-up .inner-form, #sign-up .left, #sign-up .right {
+    width: 100%; }
+  #sign-up .right {
+    margin: 0; } }

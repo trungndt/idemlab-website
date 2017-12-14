@@ -8,10 +8,7 @@ footer
     color: $white
   h3, span
     color: $white  
-  span
-    font-size: 12px
-    float: left
-    margin-top: 40px
+  
   a 
     color: $blue
   p 
@@ -28,6 +25,11 @@ footer
     clear: both
     .btn-main
       float: right
+    .no-spam
+      font-size: 12px
+      float: left
+      margin-top: 40px
+      opacity: .5
   #info-footer
     padding-top: 50px
     position: relative
@@ -56,3 +58,16 @@ footer
       margin: 10px 10px
     .gray 
       color: $gray
+
+// reponsive mobile
+@media (max-width: 992px)
+  footer
+    input
+      padding: 10px
+    .content
+      width: 90%
+      .btn-main, .no-spam
+        float: none
+    #info-footer
+      .menu-tab, .logo-client
+        margin-top: 30px

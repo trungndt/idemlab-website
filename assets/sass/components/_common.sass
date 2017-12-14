@@ -210,7 +210,7 @@ img
 	.top-content
 		p 
 			font-size: 30px
-@media (min-width: 992)
+@media (min-width: 992px)
 	.none-destop
 		display: none
 /// reponsive mobile
@@ -220,7 +220,7 @@ img
 	h3 
 		font-size: 20px
 	p 
-		font-size: 14px
+		font-size: 14.5px
 	.none
 		display: none
 	.bg-oval
@@ -228,3 +228,15 @@ img
 	.text-content
 		display: table 
 		width: 90%
+	.banner-footer
+		@include ratioWrapper(320, 280)
+		@include bgImage('../images/oval/mobile-signup.png')
+		.oval-footer
+			background: none
+	.text-footer-banner
+		width: 80%
+	.character-input
+		padding: 10px
+	.btn-disables
+		margin: 0 0 50px
+	
