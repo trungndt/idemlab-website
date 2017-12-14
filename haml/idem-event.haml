@@ -10,7 +10,7 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
-    .section-banner
+    .section-banner.none
       %nav.menu-top
         %ul.menu-1
           %li.content-menu.dropdown{role:"presentation"}
@@ -70,9 +70,12 @@
             %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
       .bot-content.text-center
         .container
-          %h3 Connect with thousands of attendees to 
+          %h3.none Connect with thousands of attendees to 
             %br 
             improve efficiency, revenue, and loyalty.
+          %h3.none-destop Connect with thousands of attendees to improve
+            %br
+            efficiency, revenue, and loyalty.
           %p.margin.margin-bottom IdemEvents is an event management toolkit to engage & excite new guests, and increase 
             %br
             customer loyalty and satisfaction.
@@ -80,15 +83,15 @@
             %img{src:"assets/images/img/img-dashboad.png"}
           .key-features.event
             %h3 Key Features
-            %a{href:"#first-feature"} Event website builder
-            %a{href:"#second-feature"} Online registration,  
+            %a.none{href:"#first-feature"} Event website builder
+            %a.none{href:"#second-feature"} Online registration,  
               %br
               ticketing & payments
-            %a{href:"#third-feature"} Contact & email 
+            %a.none{href:"#third-feature"} Contact & email 
               %br
               management 
-            %a{href:"#third-feature"} Attendee Tracking
-            %a{href:"#third-feature"} Detailed Analytics
+            %a.none{href:"#third-feature"} Attendee Tracking
+            %a.none{href:"#third-feature"} Detailed Analytics
             #first-feature.text-left
               .row
                 .col-md-4
@@ -188,51 +191,53 @@
               %p.text-footer-banner See what it's like to manage events & group reservations the easy way. Sign up for free now!
                %a.btn.btn-white{href:"#"} SIGN UP FREE
                   %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
-    %footer
-      #subscribe
-        .content
-          .row
-            .col-md-5
-              %h3 Stay in the loop
-              %p Subscribe to get updated with our latest release and products.
-            .col-md-7
-              %input{placeholder: "Enter your email address"}
-              %span We respect your inbox, no spam!
-              %a.btn.btn-main{href:"#"} SUBSCRIBE
+  %footer
+    #subscribe
+      .content
+        .row
+          .col-md-5
+            %h3 Stay in the loop
+            %p Subscribe to get updated with our latest release and products.
+          .col-md-7
+            %input{placeholder: "Enter your email address"}
+            %p.no-spam We respect your inbox, no spam!
+            %a.btn.btn-main{href:"#"} SUBSCRIBE
+              %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+    #info-footer
+      .container.text-center
+          .row.margin-bottom.text-left
+            .col-md-4
+              .img
+                %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
+              %a.btn.btn-main.none{href:"#"} SIGN UP FREE
                 %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-      #info-footer
-        .container.text-center
-            .row.margin-bottom.text-left
-              .col-md-4
-                .img
-                  %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-                %a.btn.btn-main{href:"#"} SIGN UP FREE
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-              .col-md-2.menu-tab
-                %p IDEM SOLUTION
-                %a{href:"#"} IdemEvents
-                %a{href:"#"} IdemGroup
-              .col-md-2.menu-tab
-                %p ABOUT US
-                %a{href:"#"} Company
-                %a{href:"#"} Partner
-              .col-md-2.menu-tab
-                %p CONNECT
-                %a{href:"#"} Blog
-                %a{href:"#"} Contact
-              .col-md-2.logo-client
-                %p FIND US AT
-                %a{href:"#"} 
-                  %img.logo{src:"assets/images/icon/icon-twitter.png"}
-                %a{href:"#"} 
-                  %img.logo{src:"assets/images/icon/icon-linkedin.png"}
-                %a{href:"#"}
-                  %img.logo{src:"assets/images/icon/icon-facebook.png"}
-            .content-bot
-              %span Privacy Policy 
-              %span.gray | 
-              %span Terms of Use
-            %p Copyright © 2017 Idem Labs Pte. Ltd.          
+              %a.btn.btn-main.none-destop{href:"#"} SIGN UP
+                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+            .col-md-2.col-xs-6.menu-tab
+              %p IDEM SOLUTION
+              %a{href:"#"} IdemEvents
+              %a{href:"#"} IdemGroup
+            .col-md-2.col-xs-6.menu-tab
+              %p ABOUT US
+              %a{href:"#"} Company
+              %a{href:"#"} Partner
+            .col-md-2.col-xs-6.menu-tab
+              %p CONNECT
+              %a{href:"#"} Blog
+              %a{href:"#"} Contact
+            .col-md-2.col-xs-6.logo-client
+              %p FIND US AT
+              %a{href:"#"} 
+                %img.logo{src:"assets/images/icon/icon-twitter.png"}
+              %a{href:"#"} 
+                %img.logo{src:"assets/images/icon/icon-linkedin.png"}
+              %a{href:"#"}
+                %img.logo{src:"assets/images/icon/icon-facebook.png"}
+          .content-bot
+            %span Privacy Policy 
+            %span.gray | 
+            %span Terms of Use
+          %p Copyright © 2017 Idem Labs Pte. Ltd.
 
   
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
