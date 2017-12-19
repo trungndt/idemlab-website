@@ -784,10 +784,26 @@
   border-color: #0095ff; }
 
 .nice-select .option:hover, .nice-select .option:focus, .nice-select .option:visited {
-  background-image: linear-gradient(104deg, #01d47e, #0095ff); }
+  background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3)); }
 
-.nice-select .option.selected.focus {
-  background-image: linear-gradient(104deg, #01d47e, #0095ff); }
+.nice-select .option.selected.selected {
+  background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3)); }
+
+.nice-selec .option.disabled {
+  background: transparent;
+  color: #999999; }
+
+.character-input {
+  border-radius: 25px;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #e0e0e0;
+  padding: 15px;
+  height: 52px;
+  margin: 15px 0;
+  position: relative; }
+
+.btn-active {
+  border: 1px solid #0095ff; }
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -961,13 +977,6 @@ img {
     right: 0;
     z-index: 1; }
 
-.character-input {
-  border-radius: 25px;
-  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1);
-  border: solid 1px #e0e0e0;
-  padding: 25px;
-  margin: 29px 0; }
-
 .btn-disables {
   color: #999999;
   border: 1px solid #999999;
@@ -994,6 +1003,8 @@ img {
     background: linear-gradient(115deg, #01d47e, #0095ff);
     color: #fff;
     border-color: transparent; }
+  .btn-main:focus {
+    color: #0095ff; }
 
 .btn-white {
   color: #FFF;
@@ -1153,6 +1164,10 @@ footer {
     padding: 14px 20px;
     border-radius: 25px;
     border: transparent; }
+  footer hr {
+    background-color: #e0e0e0;
+    background-image: none;
+    margin: 50px 0 15px; }
   footer .content {
     width: 70%;
     margin: auto;
@@ -1382,9 +1397,25 @@ footer {
     #contact .form-content .group-form {
       width: 74%;
       margin: auto;
-      display: table; }
+      display: table;
+      position: relative; }
+      #contact .form-content .group-form label {
+        position: absolute;
+        top: 42%;
+        left: 15px;
+        color: #999999;
+        font-weight: normal;
+        transition: all 0.2s ease-in-out; }
+      #contact .form-content .group-form input:focus + label,
+      #contact .form-content .group-form input:valid + label,
+      #contact .form-content .group-form input[data-empty="false"] + label {
+        text-transform: uppercase;
+        top: 6px;
+        background: #FFF;
+        transition: all 0.2s ease-in-out;
+        color: #0095ff; }
     #contact .form-content .inner-form {
-      margin-top: 40px; }
+      padding-top: 40px; }
   #contact .text-center > .inner {
     margin-top: 40px; }
   #contact .inner p {
@@ -1536,17 +1567,23 @@ footer {
   #idem-group-event #first-feature {
     margin-top: 40px; } }
 
-#page-404 p {
-  font-size: 18px;
-  color: #000;
-  opacity: .6; }
+#page-404 {
+  padding-top: 190px; }
 
-#page-404 a {
-  font-size: 16px;
-  color: #555555; }
-
-#page-404 .content {
-  padding: 10%; }
+#error {
+  width: 440px;
+  margin: auto;
+  height: 80vh;
+  position: relative; }
+  #error p {
+    position: absolute;
+    top: 45%;
+    left: -5%; }
+  #error .footer {
+    margin-top: 60px; }
+    #error .footer a {
+      font-size: 16px;
+      color: #555555; }
 
 #sign-up hr {
   margin: 20px 0; }

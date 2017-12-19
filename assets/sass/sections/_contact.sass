@@ -15,8 +15,25 @@
 			width: 74%
 			margin: auto
 			display: table
+			position: relative
+			label 
+				position: absolute
+				top: 42%
+				left: 15px
+				color: $disable
+				font-weight: normal
+				transition: all 0.2s ease-in-out;
+			input
+				&:focus + label,
+				&:valid + label,
+				&[data-empty="false"] + label
+					text-transform: uppercase
+					top: 6px
+					background: $white
+					transition: all 0.2s ease-in-out
+					color: $blue
 		.inner-form
-			margin-top: 40px
+			padding-top: 40px
 	.text-center > .inner
 		margin-top: 40px
 	.inner

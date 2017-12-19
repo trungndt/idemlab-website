@@ -105,12 +105,14 @@
             %a.text-blue{href:"#"}
               %img{src:"assets/images/item-hotels.png"}
               %p HOTELS
+              %img.hotel{src:"assets/images/line.png"}
           .inner
             %a.text-green{href:"#"}
               %img{src:"assets/images/item-events.png"}
               %p EVENT ORGANIZERS
+              %img.event{src:"assets/images/line.png", style:"display:none"}
         .content-group
-          .content-inner#hotel
+          .content-inner.hotel
             .row
               .col-md-6
                 %p.text-center IDEMGROUP
@@ -125,7 +127,7 @@
                   %li Hotel microsites for every event
                   %li Real time visibility into the progress of events
                   %li Collect dietary preferences from everyone
-          .content-inner#event{style:"display:none"}
+          .content-inner.event{style:"display:none"}
             .row
               .col-md-6
                 %p.text-center IDEMGROUP
@@ -262,6 +264,7 @@
                   %img.logo{src:"assets/images/icon/icon-linkedin.png"}
                 %a{href:"#"}
                   %img.logo{src:"assets/images/icon/icon-facebook.png"}
+            %hr
             .content-bot
               %span Privacy Policy 
               %span.gray | 
