@@ -6,3 +6,4 @@ $(".text-blue").on "click", (event) ->
   $("#hotel").show()
   $("#event").hide()
   event.preventDefault()
+$('#subject').niceSelect()

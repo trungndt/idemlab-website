@@ -11,4 +11,6 @@
     return event.preventDefault();
   });
 
+  $('#subject').niceSelect();
+
 }).call(this);
