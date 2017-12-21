@@ -805,6 +805,25 @@
 .btn-active {
   border: 1px solid #0095ff; }
 
+.btn {
+  border: 1px solid #FFF;
+  border-radius: 18px;
+  color: #FFF;
+  padding: 5px 24px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.btn-info {
+  color: #fff;
+  background-color: #0095FF;
+  border-color: #0095FF; }
+  .btn-info:hover, .btn-info:active, .btn-info:focus {
+    background-color: #0077cc;
+    border-color: #0077cc; }
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -925,21 +944,11 @@ img {
   width: 50%;
   margin: auto; }
 
-.content-menu {
-  padding: 10px 35px;
-  display: inline; }
-
 .bg-oval {
   background: url("../images/oval/Oval.png") top left/70% no-repeat; }
 
 .bg-white {
   background: #FFF; }
-
-.btn {
-  border: 1px solid #FFF;
-  border-radius: 18px;
-  color: #FFF;
-  padding: 5px 24px; }
 
 .icon-next-page {
   margin-left: 10px; }
@@ -1086,7 +1095,7 @@ img {
     .banner-footer .oval-footer {
       background: none; }
   .text-footer-banner {
-    width: 80%; }
+    width: 80%ssssssssssssssssssss; }
   .character-input {
     padding: 10px; }
   .btn-disables {
@@ -1097,33 +1106,33 @@ img {
 .menu-top {
   position: absolute;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  background: rgba(245, 245, 245, 0.75); }
   .menu-top a {
     font-size: 16px; }
-  .menu-top .menu-1 {
-    position: fixed;
-    z-index: 99;
-    background: #f5f5f5;
+  .menu-top ul {
     width: 100%;
     opacity: .9;
     padding-right: 10%; }
-    .menu-top .menu-1 a {
+    .menu-top ul a {
       font-size: 12px;
       color: #555555; }
-    .menu-top .menu-1 li {
+    .menu-top ul li {
       float: right; }
-    .menu-top .menu-1 .content-menu {
+    .menu-top ul .content-menu {
       padding: 10px 15px; }
-    .menu-top .menu-1 .dropdown-menu {
+    .menu-top ul .dropdown-menu {
       background: #FFF; }
-      .menu-top .menu-1 .dropdown-menu li {
+      .menu-top ul .dropdown-menu li {
         float: none;
         padding: 0; }
-      .menu-top .menu-1 .dropdown-menu .text-gray {
+      .menu-top ul .dropdown-menu .text-gray {
         margin-left: 15px; }
-      .menu-top .menu-1 .dropdown-menu p {
+      .menu-top ul .dropdown-menu p {
         margin: 0; }
-    .menu-top .menu-1 .dropdown-menu > li > a {
+    .menu-top ul .dropdown-menu > li > a {
       padding: 0; }
   .menu-top .menu-2 {
     margin-top: 60px;
@@ -1133,12 +1142,66 @@ img {
     .menu-top .menu-2 a {
       color: #FFF; }
 
+.menu-main {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 3;
+  z-index: 100;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .menu-main ul.navbar {
+    text-align: center; }
+    .menu-main ul.navbar li.content-menu {
+      padding: 18px 35px;
+      display: inline-block; }
+    .menu-main ul.navbar a {
+      color: #fff;
+      text-decoration: none; }
+      .menu-main ul.navbar a:hover, .menu-main ul.navbar a:active, .menu-main ul.navbar a:focus {
+        text-decoration: none; }
+  .menu-main .brand {
+    height: 35px;
+    box-sizing: content-box; }
+    .menu-main .brand img {
+      height: 100%;
+      width: auto; }
+  .menu-main .navbar-brand {
+    padding: 18px 35px;
+    display: none; }
+  .menu-main .content-menu.brand {
+    display: inline-block; }
+
+.menu-main.fixed {
+  background-color: #1b2536;
+  position: fixed;
+  top: 0; }
+  .menu-main.fixed .navbar-brand {
+    display: block; }
+  .menu-main.fixed .content-menu.brand {
+    display: none; }
+  .menu-main.fixed:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #0095ff;
+    background: -moz-linear-gradient(left, #0095ff 0, #07dea6 100%);
+    background: -webkit-linear-gradient(left, #0095ff 0, #07dea6 100%);
+    background: -o-linear-gradient(left, #0095ff 0, #07dea6 100%);
+    background: -ms-linear-gradient(left, #0095ff 0, #07dea6 100%);
+    background: linear-gradient(left right, #0095ff 0, #07dea6 100%); }
+
 .btn-menu {
   margin-top: 0;
   background: #0095ff;
-  position: absolute;
-  top: 8%;
-  right: 14%;
   border: 1px solid #0095ff;
   z-index: 99; }
 

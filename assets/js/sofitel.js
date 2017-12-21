@@ -1,16 +1,40 @@
 (function() {
-  $(".text-green").on("click", function(event) {
-    $(".event").show();
-    $(".hotel").hide();
-    return event.preventDefault();
-  });
+  $(function() {
+    var General;
+    General = (function() {
+      function General() {}
 
-  $(".text-blue").on("click", function(event) {
-    $(".hotel").show();
-    $(".event").hide();
-    return event.preventDefault();
-  });
+      General.init = function() {
+        $(window).scroll(function() {
+          General.setupFixedNavbar();
+        });
+        $('.text-green').on('click', function(event) {
+          $('.event').fadeIn();
+          $('.hotel').fadeOut();
+          return event.preventDefault();
+        });
+        $('.text-blue').on('click', function(event) {
+          $('.hotel').fadeIn();
+          $('.event').fadeOut();
+          return event.preventDefault();
+        });
+        $('#subject').niceSelect();
+      };
 
-  $('#subject').niceSelect();
+      General.setupFixedNavbar = function() {
+        var $nav;
+        $nav = $('.menu-main');
+        if ($(window).scrollTop() > 600) {
+          $nav.addClass('fixed');
+        } else {
+          $nav.removeClass('fixed');
+        }
+      };
+
+      return General;
+
+    })();
+    return General.init();
+  });
 
 }).call(this);

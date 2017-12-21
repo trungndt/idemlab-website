@@ -11,61 +11,72 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body.home
+    %nav.menu-top.none
+      %ul.menu-1
+        %li.content-menu.dropdown{role:"presentation"}
+          %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
+          %ul.dropdown-menu
+            %li.text-gray LOG IN AS: 
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-login.png"}
+                %span Hotel Admin
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-event.png"}
+                %span Event Organiz
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-attendee.png"}
+                %span Attendee
+        %li.content-menu
+          %a{href:"#"} Support
+    
+    %nav.menu-main
+      .container
+        %button.navbar-toggle.collapsed{type:"button", data-toggle:"collapse",data-target:"#bs-example-navbar-collapse-1",aria-expanded:"false"}
+        .navbar-brand.brand
+          %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+        .collapse.navbar-collapse
+          %ul.navbar
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemGroup
+                    %span Manage group reservations the easy way
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemEvents
+                    %span Engage with your guests in meaningful ways
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue About IdemLabs
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue Partners
+            %li.content-menu.brand
+              %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+            %li.content-menu 
+              %a{herf:"#"} Contact
+            %li.content-menu
+              %a.btn.btn-info{href:"#"} SIGN UP FREE
+                %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+      
     .section-banner
-      %nav.menu-top.none
-        %ul.menu-1
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
-            %ul.dropdown-menu
-              %li.text-gray LOG IN AS: 
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-login.png"}
-                  %span Hotel Admin
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-event.png"}
-                  %span Event Organiz
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-attendee.png"}
-                  %span Attendee
-          %li.content-menu
-            %a{href:"#"} Support
-        %ul.menu-2
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemGroup
-                  %span Manage group reservations the easy way
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemEvents
-                  %span Engage with your guests in meaningful ways
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue About IdemLabs
-              %li
-                %a{href:"#"} 
-                  %p.text-blue Partners
-          %li.content-menu 
-            %a{herf:"#"}
-              %img.logo{src:"assets/images/logo/logo-white.png"}
-          %li.content-menu 
-            %a{herf:"#"} Contact
-      %a.btn.btn-menu.none{href:"#"} SIGN UP FREE
-        %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
       .caption.bg-oval
         %h2.margin-bottom Helping maximise revenue, productivity & customer loyalty from your meetings, events and group business.
         %a.btn.none{href:"#"} SIGN UP FREE
           %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
         %a.btn.none-destop{href:"#"} SIGN UP
           %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+      
     %section
       #solution
         %h2 Our Solutions
@@ -239,7 +250,7 @@
             .row.margin-bottom.text-left
               .col-md-4
                 .img
-                  %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
+                  %img.logo{src:"assets/images/logo/logo-blue.png"}
                 %a.btn.btn-main.none{href:"#"} SIGN UP FREE
                   %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
                 %a.btn.btn-main.none-destop{href:"#"} SIGN UP

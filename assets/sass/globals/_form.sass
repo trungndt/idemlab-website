@@ -23,3 +23,20 @@
 	position: relative
 .btn-active
 	border: 1px solid $blue
+
+.btn
+	border: 1px solid $white
+	border-radius: 18px
+	color: $white
+	padding: 5px 24px
+	@include transition
+
+.btn-info
+	color: #fff
+	background-color: $color-info
+	border-color: $color-info
+	&:hover,
+	&:active,
+	&:focus
+		background-color: $color-info-darker
+		border-color: $color-info-darker
