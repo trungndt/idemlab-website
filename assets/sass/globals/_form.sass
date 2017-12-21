@@ -27,16 +27,83 @@
 .btn
 	border: 1px solid $white
 	border-radius: 18px
+	font-size: $font-size
+	line-height: 1
+	height: 35px
 	color: $white
-	padding: 5px 24px
+	padding: 9px 24px
 	@include transition
+
+.btn-next
+	padding-right: 50px
+	position: relative
+	&:after
+		content: ''
+		width: 21px
+		height: 13px
+		position: absolute
+		right: 15px
+		top: 10px
+		@include transition
 
 .btn-info
 	color: #fff
 	background-color: $color-info
 	border-color: $color-info
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next.png', center, 100% 100%)
 	&:hover,
 	&:active,
+	&:active:hover,
 	&:focus
 		background-color: $color-info-darker
 		border-color: $color-info-darker
+
+.btn-white
+	color: $white
+	border: 1px solid $white
+	background-color: transparent
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next.png', center, 100% 100%)
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:focus
+		background-color: $white
+		color: $color-primary
+		&:after
+			@include bgImage('../images/icon/icon-next-blue.png', center, 100% 100%)
+
+.btn-disables
+	color: $disable
+	border: 1px solid $disable
+	position: relative
+	margin: 40px 0 50px
+	background: $white
+	&:after
+		content: ''
+		width: 100%
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 99
+
+.btn-main 
+	color: $blue
+	position: relative
+	margin-top: 30px
+	border: 1px solid $blue
+	transition: all .2s
+	box-sizing: border-box
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next-blue.png', center, 100% 100%)
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:focus
+		background: linear-gradient(115deg, #01d47e, #0095ff)
+		color: #fff
+		border-color: transparent
+		&:after
+			@include bgImage('../images/icon/icon-next.png', center, 100% 100%)

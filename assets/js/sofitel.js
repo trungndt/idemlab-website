@@ -24,7 +24,7 @@
       General.setupFixedNavbar = function() {
         var $nav;
         $nav = $('.menu-main');
-        if ($(window).scrollTop() > 600) {
+        if ($(window).scrollTop() > 700) {
           $nav.addClass('fixed');
         } else {
           $nav.removeClass('fixed');

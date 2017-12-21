@@ -46,7 +46,6 @@
 	left: 0
 	width: 100%
 	height: $navHeight
-	z-index: 3
 	z-index: 100
 	@include transition
 	ul.navbar
@@ -54,6 +53,7 @@
 		li.content-menu
 			padding: 18px 35px
 			display: inline-block
+			font-size: $font-size
 		a
 			@include clearLink(#fff)
 
@@ -98,8 +98,18 @@
 
 	// zoom bigger destop
 @media (min-width: 1600px)
-	.btn-menu
-		top: 6%
-	.menu-top
-		a 
-			font-size: 26px
+	// .btn-menu
+	// 	top: 6%
+	// .menu-top
+	// 	a 
+	// 		font-size: 26px
+
+@include respondTo(tabletPortrait)
+	.menu-main
+		top: 0
+		height: $navHeightMobile
+		.brand
+			height: 23px
+		.navbar-brand
+			display: block
+			padding: 15px 0
