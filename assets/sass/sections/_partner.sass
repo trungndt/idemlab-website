@@ -21,6 +21,12 @@
 		height: 556px
 		background: rgba(255, 255, 255, 0.75)
 		border-radius: 0px 7px 7px 0px
+
+		p
+			font-size: 15px
+			line-height: 1.6
+			letter-spacing: .4px
+			margin-top: 40px
 	.img
 		margin-bottom: 20%
 	.bot-content
@@ -48,3 +54,14 @@
 		.featrue
 			height: auto
 			margin-top: 40px
+
+.text-gradient
+	width: 240px
+	font-size: 26px
+	line-height: 34px
+	// letter-spacing: .4px
+	color: $color-info
+	// background: linear-gradient(154.69deg, rgba(2,148,255,1) 0%, rgba(4,184,212,0.9) 49.24%, rgba(7,222,166,0.9) 100%)
+	background: linear-gradient(154.69deg, $color-info 20%, $color-success 40%, $color-info 60%, $color-success 80% )
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent

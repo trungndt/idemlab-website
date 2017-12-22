@@ -1733,6 +1733,11 @@ footer {
   height: 556px;
   background: rgba(255, 255, 255, 0.75);
   border-radius: 0px 7px 7px 0px; }
+  #partner .featrue p {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: .4px;
+    margin-top: 40px; }
 
 #partner .img {
   margin-bottom: 20%; }
@@ -1757,6 +1762,15 @@ footer {
   #partner .featrue {
     height: auto;
     margin-top: 40px; } }
+
+.text-gradient {
+  width: 240px;
+  font-size: 26px;
+  line-height: 34px;
+  color: #0095FF;
+  background: linear-gradient(154.69deg, #0095FF 20%, #2ccda2 40%, #0095FF 60%, #2ccda2 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 .idem-group-event h1 {
   font-size: 38px;
