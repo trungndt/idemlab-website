@@ -2,13 +2,26 @@
 	&:active,
 	&:focus
 		border-color: $blue
+	&:after
+		width: 10px
+		height: 10px
+		right: 5%
+	.list
+		width: 100%
+		border-radius: 25px
+		li 
+			padding: 0 15px
+			color: $light-gray
+			font-size: 14px
+	
 	.option
 		&:hover,
 		&:focus,
 		&:visited,
 			background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3))
-	.option.selected.selected
-			background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3))
+	.option.selected
+		font-weight: normal
+		background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3))
 .nice-selec
 	.option.disabled
 		background: transparent
@@ -103,6 +116,25 @@
 	&:active:hover,
 	&:focus
 		background: linear-gradient(115deg, #01d47e, #0095ff)
+		color: #fff
+		border-color: transparent
+		&:after
+			@include bgImage('../images/icon/icon-next.png', center, 100% 100%)
+
+.btn-info-bordered
+	color: $blue
+	position: relative
+	margin-top: 30px
+	border: 1px solid $blue
+	transition: all .2s
+	box-sizing: border-box
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next-blue.png', center, 100% 100%)
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:focus
+		background: $color-info
 		color: #fff
 		border-color: transparent
 		&:after

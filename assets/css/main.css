@@ -783,10 +783,24 @@
 .nice-select:active, .nice-select:focus {
   border-color: #0095ff; }
 
+.nice-select:after {
+  width: 10px;
+  height: 10px;
+  right: 5%; }
+
+.nice-select .list {
+  width: 100%;
+  border-radius: 25px; }
+  .nice-select .list li {
+    padding: 0 15px;
+    color: #424242;
+    font-size: 14px; }
+
 .nice-select .option:hover, .nice-select .option:focus, .nice-select .option:visited {
   background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3)); }
 
-.nice-select .option.selected.selected {
+.nice-select .option.selected {
+  font-weight: normal;
   background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3)); }
 
 .nice-selec .option.disabled {
@@ -886,6 +900,22 @@
     color: #fff;
     border-color: transparent; }
     .btn-main:hover:after, .btn-main:active:after, .btn-main:active:hover:after, .btn-main:focus:after {
+      background: url("../images/icon/icon-next.png") center/100% 100% no-repeat; }
+
+.btn-info-bordered {
+  color: #0095ff;
+  position: relative;
+  margin-top: 30px;
+  border: 1px solid #0095ff;
+  transition: all .2s;
+  box-sizing: border-box; }
+  .btn-info-bordered.btn-next:after {
+    background: url("../images/icon/icon-next-blue.png") center/100% 100% no-repeat; }
+  .btn-info-bordered:hover, .btn-info-bordered:active, .btn-info-bordered:active:hover, .btn-info-bordered:focus {
+    background: #0095FF;
+    color: #fff;
+    border-color: transparent; }
+    .btn-info-bordered:hover:after, .btn-info-bordered:active:after, .btn-info-bordered:active:hover:after, .btn-info-bordered:focus:after {
       background: url("../images/icon/icon-next.png") center/100% 100% no-repeat; }
 
 * {
@@ -1068,18 +1098,6 @@ img {
 .text-footer-banner {
   width: 35%;
   margin: auto; }
-
-.nice-select:after {
-  width: 10px;
-  height: 10px;
-  right: 5%; }
-
-.nice-select .list {
-  width: 100%;
-  border-radius: 25px; }
-  .nice-select .list li {
-    padding: 0 15px;
-    color: #424242; }
 
 @media (min-width: 1600px) {
   h3 {
