@@ -161,20 +161,17 @@
             .col-md-7
               %input{placeholder: "Enter your email address"}
               %p.no-spam We respect your inbox, no spam!
-              %a.btn.btn-main{href:"#"} SUBSCRIBE
-                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              %a.btn.btn-main.btn-next{href:"#"} SUBSCRIBE
       #info-footer
         .container.text-center
             .row.margin-bottom.text-left
               .col-md-4
                 .img
                   %img.logo{src:"assets/images/logo/logo-blue.png"}
-                %a.btn.btn-main.none{href:"#"} SIGN UP FREE
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-                %a.btn.btn-main.none-destop{href:"#"} SIGN UP
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+                %a.btn.btn-info-bordered.btn-next.none{href:"#"} SIGN UP FREE
+                %a.btn.btn-info-bordered.btn-next.none-destop{href:"#"} SIGN UP
               .col-md-2.col-xs-6.menu-tab
-                %p IDEM SOLUTION
+                %p IDEM SOLUTIONS
                 %a{href:"#"} IdemEvents
                 %a{href:"#"} IdemGroup
               .col-md-2.col-xs-6.menu-tab
@@ -195,11 +192,10 @@
                   %img.logo{src:"assets/images/icon/icon-facebook.png"}
             %hr
             .content-bot
-              %span Privacy Policy 
+              %a{href:"#"} Privacy Policy 
               %span.gray | 
-              %span Terms of Use
-            %p Copyright © 2017 Idem Labs Pte. Ltd.
-
+              %a{href:"#"} Terms of Use
+            %p.copyright Copyright © 2017 Idem Labs Pte. Ltd.
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
 %script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
