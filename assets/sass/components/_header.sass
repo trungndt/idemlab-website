@@ -69,6 +69,28 @@
 	.content-menu.brand
 		display: inline-block
 
+	.dropdown-menu 
+		@include prefix(transform-origin, top)
+		@include prefix(animation-fill-mode, forwards)
+		@include prefix(transform, scale(1, .8) translateX(-50%))
+		@include transition(all .1s)
+		left: 50%
+		display: block
+		opacity: 0
+		visibility: none
+		&:before
+			@include triangle('up', 6px, 6px, #fff)
+			position: absolute
+			bottom: 100%
+			left: 50%
+			@include prefix(transform, translateX(-50%))
+
+	.open > .dropdown-menu
+		@include prefix(transform, scale(1, 1) translateX(-50%))
+		opacity: 1
+		visibility: visible
+
+
 .menu-main.fixed
 	background-color: $color-secondary
 	position: fixed

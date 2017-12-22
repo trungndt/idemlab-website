@@ -20,6 +20,13 @@ $ ->
 						scrollTop: $target.offset().top - 100
 					)
 				return
+
+			# Nav effects
+			$(document).on 'click', '.content-menu.dropdown a', (e) ->
+				console.log(this)
+				do e.preventDefault
+				return
+
 			$('#subject').niceSelect()
 			return
 		@setupFixedNavbar: ->

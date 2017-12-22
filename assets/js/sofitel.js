@@ -26,6 +26,10 @@
             scrollTop: $target.offset().top - 100
           });
         });
+        $(document).on('click', '.content-menu.dropdown a', function(e) {
+          console.log(this);
+          e.preventDefault();
+        });
         $('#subject').niceSelect();
       };
 
