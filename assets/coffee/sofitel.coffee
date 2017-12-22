@@ -12,6 +12,14 @@ $ ->
 			  $('.hotel').fadeIn()
 			  $('.event').fadeOut()
 			  event.preventDefault()
+
+			$(document).on 'click', '[data-action="scroll"]', () ->
+				$target = $($(this).attr('href'))
+				console.log($target)
+				$('html, body').animate(
+						scrollTop: $target.offset().top - 100
+					)
+				return
 			$('#subject').niceSelect()
 			return
 		@setupFixedNavbar: ->

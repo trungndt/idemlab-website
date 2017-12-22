@@ -786,7 +786,8 @@
 .nice-select:after {
   width: 10px;
   height: 10px;
-  right: 5%; }
+  right: 5%;
+  margin-top: -7px; }
 
 .nice-select .list {
   width: 100%;
@@ -938,7 +939,7 @@ h2 {
   font-size: 38px;
   line-height: 1.5; }
 
-hr {
+hr.gradient {
   background-image: linear-gradient(to right, #01d47e, #0095ff);
   height: 2px;
   border: 0;
@@ -948,9 +949,11 @@ p {
   font-size: 16px;
   line-height: 1.5; }
 
-a, a:hover, a:hover:active, a:active, a:focus {
-  text-decoration: none;
-  cursor: pointer; }
+a {
+  color: #0095FF;
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    text-decoration: none; }
 
 span {
   font-size: 15px;
@@ -1115,9 +1118,7 @@ img {
   .container {
     width: 74%; }
   .text-content {
-    width: 60%; }
-  .top-content p {
-    font-size: 30px; } }
+    width: 60%; } }
 
 @media (min-width: 992px) {
   .none-destop {
@@ -1733,25 +1734,55 @@ footer {
     height: auto;
     margin-top: 40px; } }
 
-#idem-group-event label {
+.idem-group-event h1 {
+  font-size: 38px;
+  letter-spacing: .5; }
+
+.idem-group-event h2, .idem-group-event h3 {
+  color: #555555; }
+
+.idem-group-event h2 {
+  font-size: 30px; }
+
+.idem-group-event h3 {
+  font-size: 25px;
+  line-height: 1.4;
+  letter-spacing: 0.7px; }
+
+.idem-group-event h4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 1.56;
+  color: #777777; }
+
+.idem-group-event label {
   color: #0095ff;
   font-size: 16px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-weight: normal; }
+  .idem-group-event label ~ p {
+    color: #4A4A4A;
+    font-size: 14px;
+    line-height: 1.6; }
 
-#idem-group-event a {
+.idem-group-event a {
   font-size: 16px;
   display: inline-block; }
 
-#idem-group-event .key-features {
+.idem-group-event .key-features {
   margin-top: 100px; }
-  #idem-group-event .key-features h3 {
-    font-size: 25px; }
-  #idem-group-event .key-features a {
-    margin: 40px 86px 82px;
+
+.idem-group-event .key-features-list {
+  padding: 30px 0 5px; }
+  .idem-group-event .key-features-list a {
+    margin: 0 23px;
     vertical-align: middle; }
 
-#idem-group-event .event a {
-  margin: 40px 23px 82px; }
+.idem-group-event #first-feature {
+  margin-top: 50px; }
+
+.idem-group-event#idem-group .key-features-list a {
+  min-width: 200px; }
 
 @media (min-width: 1600px) {
   #idem-group-event label, #idem-group-event a {

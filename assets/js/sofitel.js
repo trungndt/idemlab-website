@@ -18,6 +18,14 @@
           $('.event').fadeOut();
           return event.preventDefault();
         });
+        $(document).on('click', '[data-action="scroll"]', function() {
+          var $target;
+          $target = $($(this).attr('href'));
+          console.log($target);
+          $('html, body').animate({
+            scrollTop: $target.offset().top - 100
+          });
+        });
         $('#subject').niceSelect();
       };
 

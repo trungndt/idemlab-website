@@ -20,7 +20,8 @@ h3
 h2 
 	font-size: 38px
 	line-height: 1.5
-hr
+
+hr.gradient
 	background-image: linear-gradient(to right, #01d47e, #0095ff)
 	height: 2px
 	border: 0
@@ -29,13 +30,8 @@ p
 	font-size: 16px
 	line-height: 1.5
 a 
-	&,
-	&:hover,
-	&:hover:active,
-	&:active,
-	&:focus
-		text-decoration: none
-		cursor: pointer
+	@include clearLink($color-info)
+	
 span
 	font-size: 15px
 	color: $light-gray
@@ -171,9 +167,9 @@ img
 		width: 74%
 	.text-content
 		width: 60%
-	.top-content
-		p
-			font-size: 30px
+	// .top-content
+		// p
+			// font-size: 30px
 @media (min-width: 992px)
 	.none-destop
 		display: none

@@ -10,64 +10,71 @@
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
-    .section-banner.none
-      %nav.menu-top
-        %ul.menu-1
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
-            %ul.dropdown-menu
-              %li.text-gray LOG IN AS: 
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-login.png"}
-                  %span Hotel Admin
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-event.png"}
-                  %span Event Organiz
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-attendee.png"}
-                  %span Attendee
-          %li.content-menu
-            %a{href:"#"} Support
-        %ul.menu-2
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemGroup
-                  %span Manage group reservations the easy way
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemEvents
-                  %span Engage with your guests in meaningful ways
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue About IdemLabs
-              %li
-                %a{href:"#"} 
-                  %p.text-blue Partners
-          %li.content-menu 
-            %a{herf:"#"}
-              %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-          %li.content-menu 
-            %a{herf:"#"} Contact
-      %a.btn.btn-menu{href:"#"} SIGN UP FREE
-        %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
-    #idem-group-event
+    %nav.menu-top.none
+      %ul.menu-1
+        %li.content-menu.dropdown{role:"presentation"}
+          %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
+          %ul.dropdown-menu
+            %li.text-gray LOG IN AS: 
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-login.png"}
+                %span Hotel Admin
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-event.png"}
+                %span Event Organiz
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-attendee.png"}
+                %span Attendee
+        %li.content-menu
+          %a{href:"#"} Support
+    %nav.menu-main
+      .container
+        %button.navbar-toggle.collapsed{type:"button", data-toggle:"collapse",data-target:"#bs-example-navbar-collapse-1",aria-expanded:"false"}
+        .navbar-brand.brand
+          %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+        .collapse.navbar-collapse
+          %ul.navbar
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemGroup
+                    %span Manage group reservations the easy way
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemEvents
+                    %span Engage with your guests in meaningful ways
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue About IdemLabs
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue Partners
+            %li.content-menu.brand
+              %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+            %li.content-menu 
+              %a{herf:"#"} Contact
+            %li.content-menu
+              %a.btn.btn-info.btn-next{href:"#"} SIGN UP FREE
+    
+    .idem-group-event#idem-event
       .top-content
         .container
           %p IdemEvents
-          %h2 Powerful event management 
+          %h1 Powerful event management 
             %br
             software.
-          %a.btn.btn-main{href:"#"} GET STARTED FREE
-            %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+          %a.btn.btn-main.btn-next{href:"#"} GET STARTED FREE
+            
       .bot-content.text-center
         .container
           %h3.none Connect with thousands of attendees to 
@@ -82,42 +89,46 @@
           .img.margin-bottom
             %img{src:"assets/images/img/img-dashboad.png"}
           .key-features.event
-            %h3 Key Features
-            %a.none{href:"#first-feature"} Event website builder
-            %a.none{href:"#second-feature"} Online registration,  
-              %br
-              ticketing & payments
-            %a.none{href:"#third-feature"} Contact & email 
-              %br
-              management 
-            %a.none{href:"#third-feature"} Attendee Tracking
-            %a.none{href:"#third-feature"} Detailed Analytics
+            %h2 Key Features
+            .key-features-list
+              %a.none{data-action:"scroll",href:"#first-feature"} Event website builder
+              %a.none{data-action:"scroll",href:"#second-feature"} Online registration,  
+                %br
+                ticketing & payments
+              %a.none{data-action:"scroll",href:"#third-feature"} Contact & email 
+                %br
+                management 
+              %a.none{data-action:"scroll",href:"#third-feature"} Attendee Tracking
+              %a.none{data-action:"scroll",href:"#third-feature"} Detailed Analytics
+            %hr
+
             #first-feature.text-left
               .row
                 .col-md-4
                   .img.margin-bottom
                     %img{src:"assets/images/customized.png"}
                   %h3 Event website builder
-                  %p Promote your event, inform and engage your audience
+                  %h4 Promote your event, inform and engage your audience
                     %br
                     %br
                     Create a fully configurable event website with the website module that allows your event to be professionally displayed, marketed and promoted. Whether you need total control over look and feel, or just want to point-and-click your way to a professional website, the website module supports every type of user.
                 .col-md-4
-                  %label BUILT WITH GOOGLE ANALYTICS
+                  %label SHOWCASE YOUR BRAND
                   %p.margin-bottom With dynamic and responsive layouts, a thing of beauty to impress your attendees, colleagues and/or clients.
-                  %label AUTOMATED WORKFLOWS
-                  %p Makes it easy to measure page views, clickthrough rates, conversion rates, demographic information, and so much more.  
+
+                  %label BUILT WITH GOOGLE ANALYTICS
+                  %p Makes it easy to measure page views, clickthrough rates, conversion rates, demographic information, and so much more.
                 .col-md-4
                   %label INFORMATION RICH
-                  %p.margin-bottom Organizers can publish and update event details so your attendees make informed decisions to enhance their event experience. 
-            %hr
+                  %p.margin-bottom Organizers can publish and update event details so your attendees make informed decisions to enhance their event experience.
+            %hr.gradient
             #second-feature.text-left
               .row
                 .col-md-4
                   .img.margin-bottom
                     %img{src:"assets/images/online-regist.png"}
                   %h3 Online registration, ticketing & payments
-                  %p Maximize event registrations with our simple, yet powerful event registration software.
+                  %h4 Maximize event registrations with our simple, yet powerful event registration software.
                 .col-md-4
                   %label SAVE TIME
                   %p.margin-bottom Opening, entering and sorting out illegible or inaccurate forms can be very time consuming, eliminating manual registration saves hours per event.
@@ -126,14 +137,14 @@
                 .col-md-4
                   %label INCREASED ATTENDANCE
                   %p Increase the volume of attendees by up to 20% because of the ease of access to ticketing.
-            %hr
+            %hr.gradient
             #third-feature.text-left
               .row
                 .col-md-4
                   .img.margin-bottom
                     %img{src:"assets/images/contact.png"}
                   %h3 Contact & email management
-                  %p Manage, segment and engage contacts thanks to a smart event integrations with MailChimp contact management tool.
+                  %h4 Manage, segment and engage contacts thanks to a smart event integrations with MailChimp contact management tool.
                 .col-md-4
                   %label SORT CONTACTS
                   %p.margin-bottom Based on any criteria you choose. Updates in real time, making it easier to measure, manage and message them.
@@ -142,35 +153,35 @@
                 .col-md-4
                   %label INTEGRATED WITH MAILCHIMP
                   %p The preeminent email platform to ensure you get the best deliverability, flexibility & reporting.  
-            %hr
+            %hr.gradient
             #fourth-feature.text-left
               .row
                 .col-md-4
                   .img.margin-bottom
                     %img{src:"assets/images/tracking.png"}
                   %h3 Attendee tracking
-                  %p Instant visibility into who attended your event and what time arrived? Our simple, effective check-in management speeds up the process. No more sheets of paper and lengthy queues. 
+                  %h4 Instant visibility into who attended your event and what time arrived? Our simple, effective check-in management speeds up the process. No more sheets of paper and lengthy queues. 
                     %br
                     %br
                     You want your guests inside the event, not languishing out the front waiting for someone to find your name on a dozen sheets of paper. Speed up the process, a click of a scanner or a search for a name. Fast, accurate, simple.
                 .col-md-4
                   %label FULL DIGITAL TRACKING
-                  %p.margin-bottom No more untidy attendee lists to deal with
+                  %p.margin-bottom No more untidy attendee lists to deal with.
                   %label VIEW EVENT TRAFFIC
                   %p Realtime attendance tracking and reporting.
                 .col-md-4
                   %label ONE-CLICK CHECK-IN
-                  %p.margin-bottom Speed up registrations at the door, no more long queues
+                  %p.margin-bottom Speed up registrations at the door, no more long queues.
                   %label ONE LIST, MANY DEVICES
                   %p Multiple check-in stations or tablets to speed the process.
-            %hr
+            %hr.gradient
             #fifth-feature.text-left
               .row
                 .col-md-4
                   .img.margin-bottom
                     %img{src:"assets/images/analytics.png"}
                   %h3 Detailed analytics
-                  %p Collating and measuring your event is a breeze with in IdemEvents. Our powerful reporting and analytics module mean you can measure every detail of your event to calculate your ROI. 
+                  %h4 Collating and measuring your event is a breeze with in IdemEvents. Our powerful reporting and analytics module mean you can measure every detail of your event to calculate your ROI. 
                     %br
                     %br
                     Dashboard Reporting: Our business intelligence dashboards are data visualization tools that displays the status, metrics and key performance indicators for each event. View the standard event reports that include, attendee reports, sales reports & marketing reports.
@@ -189,58 +200,52 @@
             .d-tbl-cell
               %h3 Ready to get started?
               %p.text-footer-banner See what it's like to manage events & group reservations the easy way. Sign up for free now!
-               %a.btn.btn-white{href:"#"} SIGN UP FREE
-                  %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+               %a.btn.btn-white.btn-next{href:"#"} SIGN UP FREE
   %footer
-    #subscribe
-      .content
-        .row
-          .col-md-5
-            %h3 Stay in the loop
-            %p Subscribe to get updated with our latest release and products.
-          .col-md-7
-            %input{placeholder: "Enter your email address"}
-            %p.no-spam We respect your inbox, no spam!
-            %a.btn.btn-main{href:"#"} SUBSCRIBE
-              %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-    #info-footer
-      .container.text-center
-          .row.margin-bottom.text-left
-            .col-md-4
-              .img
-                %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-              %a.btn.btn-main.none{href:"#"} SIGN UP FREE
-                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-              %a.btn.btn-main.none-destop{href:"#"} SIGN UP
-                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-            .col-md-2.col-xs-6.menu-tab
-              %p IDEM SOLUTION
-              %a{href:"#"} IdemEvents
-              %a{href:"#"} IdemGroup
-            .col-md-2.col-xs-6.menu-tab
-              %p ABOUT US
-              %a{href:"#"} Company
-              %a{href:"#"} Partner
-            .col-md-2.col-xs-6.menu-tab
-              %p CONNECT
-              %a{href:"#"} Blog
-              %a{href:"#"} Contact
-            .col-md-2.col-xs-6.logo-client
-              %p FIND US AT
-              %a{href:"#"} 
-                %img.logo{src:"assets/images/icon/icon-twitter.png"}
-              %a{href:"#"} 
-                %img.logo{src:"assets/images/icon/icon-linkedin.png"}
-              %a{href:"#"}
-                %img.logo{src:"assets/images/icon/icon-facebook.png"}
-          %hr
-          .content-bot
-            %span Privacy Policy 
-            %span.gray | 
-            %span Terms of Use
-          %p Copyright © 2017 Idem Labs Pte. Ltd.
-
-  
+      #subscribe
+        .content
+          .row
+            .col-md-5
+              %h3 Stay in the loop
+              %p Subscribe to get updated with our latest release and products.
+            .col-md-7
+              %input{placeholder: "Enter your email address"}
+              %p.no-spam We respect your inbox, no spam!
+              %a.btn.btn-main.btn-next{href:"#"} SUBSCRIBE
+      #info-footer
+        .container.text-center
+            .row.margin-bottom.text-left
+              .col-md-4
+                .img
+                  %img.logo{src:"assets/images/logo/logo-blue.png"}
+                %a.btn.btn-info-bordered.btn-next.none{href:"#"} SIGN UP FREE
+                %a.btn.btn-info-bordered.btn-next.none-destop{href:"#"} SIGN UP
+              .col-md-2.col-xs-6.menu-tab
+                %p IDEM SOLUTIONS
+                %a{href:"#"} IdemEvents
+                %a{href:"#"} IdemGroup
+              .col-md-2.col-xs-6.menu-tab
+                %p ABOUT US
+                %a{href:"#"} Company
+                %a{href:"#"} Partner
+              .col-md-2.col-xs-6.menu-tab
+                %p CONNECT
+                %a{href:"#"} Blog
+                %a{href:"#"} Contact
+              .col-md-2.col-xs-6.logo-client
+                %p FIND US AT
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-twitter.png"}
+                %a{href:"#"} 
+                  %img.logo{src:"assets/images/icon/icon-linkedin.png"}
+                %a{href:"#"}
+                  %img.logo{src:"assets/images/icon/icon-facebook.png"}
+            %hr
+            .content-bot
+              %span Privacy Policy 
+              %span.gray | 
+              %span Terms of Use
+            %p.copyright Copyright © 2017 Idem Labs Pte. Ltd.
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
 %script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
