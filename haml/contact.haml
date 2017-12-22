@@ -3,7 +3,7 @@
     %title Kingsmen
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
-    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Noto+Serif|Rubik:400,500", rel:"stylesheet"}
     %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
@@ -74,23 +74,29 @@
           .col-md-8
             .form-content.text-center
               %form
-                .inner-form
-                  %select.group-form#subject.nice-select.character-input.select-featrue
-                    %option{value:"",selected:"selected",disabled:"disabled"} Select a subject
-                    %option{value:"Sales"} Sales
-                    %option{value:"Media"} Media
-                    %option{value:"Apply for Partnership"} Apply for Partnership
-                  .group-form
-                    %input.form-control.character-input{type:"text", required:"required"}
-                    %label{for:"name"} Your name
-                  .group-form
-                    %input.form-control.character-input{type:"text", required:"required"}
-                    %label{for:"email"} Email address
-                  .group-form
-                    %input.form-control.character-input{type:"text", required:"required"}
-                    %label{for:"company"} Company name
-                  .group-form
-                    %textarea.form-control.character-input{type:"text", placeholder:"Your message…", rows:"5"}
+                .inner-form.form-horizontal
+                  .form-group
+                    .group-form
+                      %select#subject.nice-select.character-input.select-featrue
+                        %option{value:"",selected:"selected",disabled:"disabled"} Select a subject
+                        %option{value:"Sales"} Sales
+                        %option{value:"Media"} Media
+                        %option{value:"Apply for Partnership"} Apply for Partnership
+                  .form-group
+                    .group-form
+                      %input.form-control.character-input{type:"text", required:"required"}
+                      %label{for:"name"} Your name
+                  .form-group
+                    .group-form
+                      %input.form-control.character-input{type:"text", required:"required"}
+                      %label{for:"email"} Email address
+                  .form-group
+                    .group-form
+                      %input.form-control.character-input{type:"text", required:"required"}
+                      %label{for:"company"} Company name
+                  .form-group
+                    .group-form
+                      %textarea.form-control.character-input{type:"text", placeholder:"Your message…", rows:"5"}
               %a.btn.btn-disables{href:"#"}
                 SUBMIT MESSAGE
                 %img.icon-next-page{src:"assets/images/icon/icon-next-gray.png"}

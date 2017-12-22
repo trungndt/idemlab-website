@@ -3,73 +3,79 @@
     %title Kingsmen
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
-    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel:"stylesheet"}
+    %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Noto+Serif|Rubik:400,500", rel:"stylesheet"}
     %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
-    .section-banner.none
-      %nav.menu-top
-        %ul.menu-1
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
-            %ul.dropdown-menu
-              %li.text-gray LOG IN AS: 
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-login.png"}
-                  %span Hotel Admin
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-event.png"}
-                  %span Event Organiz
-              %li
-                %a{href:"#"} 
-                  %img{src:"assets/images/icon/icon-attendee.png"}
-                  %span Attendee
-          %li.content-menu
-            %a{href:"#"} Support
-        %ul.menu-2
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemGroup
-                  %span Manage group reservations the easy way
-              %li
-                %a{href:"#"} 
-                  %p.text-blue IdemEvents
-                  %span Engage with your guests in meaningful ways
-          %li.content-menu.dropdown{role:"presentation"}
-            %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
-            %ul.dropdown-menu
-              %li
-                %a{href:"#"} 
-                  %p.text-blue About IdemLabs
-              %li
-                %a{href:"#"} 
-                  %p.text-blue Partners
-          %li.content-menu 
-            %a{herf:"#"}
-              %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-          %li.content-menu 
-            %a{herf:"#"} Contact
-      %a.btn.btn-menu{href:"#"} SIGN UP FREE
-        %img.icon-next-page{src:"assets/images/icon/icon-next.png"}
+    %nav.menu-top.none
+      %ul.menu-1
+        %li.content-menu.dropdown{role:"presentation"}
+          %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Login 
+          %ul.dropdown-menu
+            %li.text-gray LOG IN AS: 
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-login.png"}
+                %span Hotel Admin
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-event.png"}
+                %span Event Organiz
+            %li
+              %a{href:"#"} 
+                %img{src:"assets/images/icon/icon-attendee.png"}
+                %span Attendee
+        %li.content-menu
+          %a{href:"#"} Support
+    %nav.menu-main
+      .container
+        %button.navbar-toggle.collapsed{type:"button", data-toggle:"collapse",data-target:"#bs-example-navbar-collapse-1",aria-expanded:"false"}
+        .navbar-brand.brand
+          %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+        .collapse.navbar-collapse
+          %ul.navbar
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemGroup
+                    %span Manage group reservations the easy way
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue IdemEvents
+                    %span Engage with your guests in meaningful ways
+            %li.content-menu.dropdown{role:"presentation"}
+              %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Company 
+              %ul.dropdown-menu
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue About IdemLabs
+                %li
+                  %a{href:"#"} 
+                    %p.text-blue Partners
+            %li.content-menu.brand
+              %a{herf:"#"}
+                %img.logo{src:"assets/images/logo/logo-white-1.png"}
+            %li.content-menu 
+              %a{herf:"#"} Contact
+            %li.content-menu
+              %a.btn.btn-info.btn-next{href:"#"} SIGN UP FREE
+    
     #partner
       .top-content
         .container
-          %span Partner with Idem
+          %p Partner with Idem
           %h2 Grow your business with us. 
             %br
             Let’s talk if you are providing 
             %br
             complementary solutions to hoteliers.
-          %a.btn.btn-main{href:"#"} APPLY FOR PARTNERSHIP
-            %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+          %a.btn.btn-main.btn-next{href:"#"} APPLY FOR PARTNERSHIP
       .bot-content.bg-oval
         .container.text-center
           %h2.margin-bottom Types of Partnership
@@ -106,8 +112,7 @@
                 .img
                   %img{src:"assets/images/text.png"}
                 %p &nbsp;- Ryunosuke Satoro
-          %a.btn.btn-main{href:"#"} APPLY FOR PARTNERSHIP
-            %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+          %a.btn.btn-main.btn-next{href:"#"} APPLY FOR PARTNERSHIP
   %footer
       #subscribe
         .content
@@ -118,20 +123,17 @@
             .col-md-7
               %input{placeholder: "Enter your email address"}
               %p.no-spam We respect your inbox, no spam!
-              %a.btn.btn-main{href:"#"} SUBSCRIBE
-                %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+              %a.btn.btn-main.btn-next{href:"#"} SUBSCRIBE
       #info-footer
         .container.text-center
             .row.margin-bottom.text-left
               .col-md-4
                 .img
-                  %img.logo{src:"assets/images/logo/IdemLabs-Blue.png"}
-                %a.btn.btn-main.none{href:"#"} SIGN UP FREE
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
-                %a.btn.btn-main.none-destop{href:"#"} SIGN UP
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+                  %img.logo{src:"assets/images/logo/logo-blue.png"}
+                %a.btn.btn-info-bordered.btn-next.none{href:"#"} SIGN UP FREE
+                %a.btn.btn-info-bordered.btn-next.none-destop{href:"#"} SIGN UP
               .col-md-2.col-xs-6.menu-tab
-                %p IDEM SOLUTION
+                %p IDEM SOLUTIONS
                 %a{href:"#"} IdemEvents
                 %a{href:"#"} IdemGroup
               .col-md-2.col-xs-6.menu-tab
@@ -155,7 +157,7 @@
               %span Privacy Policy 
               %span.gray | 
               %span Terms of Use
-            %p Copyright © 2017 Idem Labs Pte. Ltd.
+            %p.copyright Copyright © 2017 Idem Labs Pte. Ltd.
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
 %script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
