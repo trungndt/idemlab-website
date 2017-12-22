@@ -116,12 +116,25 @@
 			width: 50%
 			display: table
 			margin-bottom: 10px
+			text-align: center
+			.img-container
+				margin-bottom: 10px
+				display: inline-block
+				border-radius: 50%
+				@include transition
+			
 			a.text-blue
 				@include clearLink($color-info)
+				.img-container
+					background-color: rgba($color-info, .05)
+					&:hover
+						background-color: rgba($color-info, .1)
 			a.text-green
 				@include clearLink($color-success)
-			img
-				margin-bottom: 10px
+				.img-container
+					background-color: rgba($color-success, .05)
+					&:hover
+						background-color: rgba($color-success, .1)
 
 		.border-bot-blue
 			border-bottom: 1px solid $blue 

@@ -1448,19 +1448,35 @@ footer {
     text-align: center;
     width: 50%;
     display: table;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: center; }
+    .home #workflows .inner .img-container {
+      margin-bottom: 10px;
+      display: inline-block;
+      border-radius: 50%;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
     .home #workflows .inner a.text-blue {
       color: #0095FF;
       text-decoration: none; }
       .home #workflows .inner a.text-blue:hover, .home #workflows .inner a.text-blue:active, .home #workflows .inner a.text-blue:focus {
         text-decoration: none; }
+      .home #workflows .inner a.text-blue .img-container {
+        background-color: rgba(0, 149, 255, 0.05); }
+        .home #workflows .inner a.text-blue .img-container:hover {
+          background-color: rgba(0, 149, 255, 0.1); }
     .home #workflows .inner a.text-green {
       color: #2ccda2;
       text-decoration: none; }
       .home #workflows .inner a.text-green:hover, .home #workflows .inner a.text-green:active, .home #workflows .inner a.text-green:focus {
         text-decoration: none; }
-    .home #workflows .inner img {
-      margin-bottom: 10px; }
+      .home #workflows .inner a.text-green .img-container {
+        background-color: rgba(44, 205, 162, 0.05); }
+        .home #workflows .inner a.text-green .img-container:hover {
+          background-color: rgba(44, 205, 162, 0.1); }
   .home #workflows .border-bot-blue {
     border-bottom: 1px solid #0095ff; }
   .home #workflows .border-bot-green {
