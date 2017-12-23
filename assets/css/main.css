@@ -1292,6 +1292,8 @@ img {
   background-color: #1b2536;
   position: fixed;
   top: 0; }
+  .menu-main.fixed.nav-hide {
+    top: -75px; }
   .menu-main.fixed .navbar-brand {
     display: block; }
   .menu-main.fixed .content-menu.brand {
@@ -1328,9 +1330,6 @@ img {
 
 footer {
   margin-top: 5px; }
-  footer #subscribe {
-    background-color: #1b2536;
-    color: #FFF; }
   footer h3, footer span {
     color: #FFF; }
   footer h3 {
@@ -1356,18 +1355,6 @@ footer {
     background-color: #e0e0e0;
     background-image: none;
     margin: 50px 0 15px; }
-  footer .content {
-    width: 70%;
-    margin: auto;
-    padding: 40px 0;
-    clear: both; }
-    footer .content .btn-main {
-      float: right; }
-    footer .content .no-spam {
-      font-size: 12px;
-      float: left;
-      margin-top: 40px;
-      font-style: italic; }
   footer #info-footer {
     padding-top: 50px;
     position: relative; }
@@ -1399,6 +1386,29 @@ footer {
       color: #555555; }
   footer .copyright {
     font-size: 12px; }
+
+#subscribe {
+  background-color: #1b2536;
+  color: #FFF; }
+  #subscribe .content {
+    width: 70%;
+    margin: auto;
+    padding: 40px 0;
+    clear: both; }
+    #subscribe .content .btn-main {
+      float: right; }
+    #subscribe .content .no-spam {
+      float: left; }
+  #subscribe .subscribe-footer {
+    margin-top: 30px;
+    font-style: italic; }
+    #subscribe .subscribe-footer p {
+      font-size: 12px; }
+    #subscribe .subscribe-footer .btn-main {
+      margin: 0; }
+    #subscribe .subscribe-footer .msg-success {
+      text-align: center;
+      display: none; }
 
 @media (max-width: 992px) {
   footer input {

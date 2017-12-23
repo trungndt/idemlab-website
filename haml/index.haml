@@ -239,8 +239,12 @@
               %p Subscribe to get updated with our latest release and products.
             .col-md-7
               %input{placeholder: "Enter your email address"}
-              %p.no-spam We respect your inbox, no spam!
-              %a.btn.btn-main.btn-next{href:"#"} SUBSCRIBE
+              .subscribe-footer
+                .msg-default
+                  %p.no-spam We respect your inbox, no spam!
+                  %a.btn.btn-main.btn-next#btnSubscribe{href:"#"} SUBSCRIBE
+                .msg-success
+                  %p Thank you for subscribing to our newsletter!
       #info-footer
         .container.text-center
             .row.margin-bottom.text-left

@@ -1,13 +1,11 @@
 (function() {
   $(function() {
-    var General;
+    var General, Homepage;
     General = (function() {
       function General() {}
 
       General.init = function() {
-        $(window).scroll(function() {
-          General.setupFixedNavbar();
-        });
+        $(window).scroll(function() {});
         $('.text-green').on('click', function(event) {
           $('.event').fadeIn();
           $('.hotel').fadeOut();
@@ -31,22 +29,60 @@
           e.preventDefault();
         });
         $('#subject').niceSelect();
+        General.setupFixedNavbar();
       };
 
       General.setupFixedNavbar = function() {
-        var $nav;
+        var $nav, direction, iScrollPos, wScroll;
         $nav = $('.menu-main');
-        if ($(window).scrollTop() > 700) {
-          $nav.addClass('fixed');
-        } else {
-          $nav.removeClass('fixed');
-        }
+        iScrollPos = 0;
+        direction = '';
+        wScroll = 0;
+        $(window).scroll(function() {
+          wScroll = $(window).scrollTop();
+          direction = wScroll > iScrollPos ? 'down' : 'up';
+          if (wScroll > 700) {
+            $nav.addClass('fixed');
+            if (direction === 'up') {
+              $nav.addClass('nav-hide');
+            } else {
+              $nav.removeClass('nav-hide');
+            }
+          } else {
+            $nav.removeClass('fixed');
+          }
+          console.log(direction);
+          iScrollPos = wScroll;
+        });
       };
 
       return General;
 
     })();
-    return General.init();
+    Homepage = (function() {
+      function Homepage() {}
+
+      Homepage.init = function() {
+        this.handleSubscribeForm();
+      };
+
+      Homepage.handleSubscribeForm = function() {
+        $(document).on('click', '#btnSubscribe', function(e) {
+          e.preventDefault();
+          $('.msg-default').hide();
+          $('.msg-success').show();
+          setTimeout(function() {
+            $('.msg-default').show();
+            return $('.msg-success').hide();
+          }, 2000);
+        });
+      };
+
+      return Homepage;
+
+    })();
+    General.init();
+    return Homepage.init();
   });
 
 }).call(this);
