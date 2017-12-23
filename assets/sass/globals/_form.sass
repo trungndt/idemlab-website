@@ -93,22 +93,6 @@ input, select, button
 		&:after
 			@include bgImage('../images/icon/icon-next-blue.png', center, 100% 100%)
 
-.btn-disables
-	color: $disable
-	border: 1px solid $disable
-	position: relative
-	background: $white
-	&.btn-next:after
-		@include bgImage('../images/icon/icon-next-gray.png', center, 100% 100%)
-	// &:after
-	// 	content: ''
-	// 	width: 100%
-	// 	top: 0
-	// 	bottom: 0
-	// 	left: 0
-	// 	right: 0
-	// 	z-index: 99
-
 .btn-main 
 	color: $blue
 	position: relative
@@ -116,6 +100,7 @@ input, select, button
 	border: 1px solid $blue
 	transition: all .2s
 	box-sizing: border-box
+	background-color: transparent
 	&.btn-next:after
 		@include bgImage('../images/icon/icon-next-blue.png', center, 100% 100%)
 	&:hover,
@@ -127,6 +112,31 @@ input, select, button
 		border-color: transparent
 		&:after
 			@include bgImage('../images/icon/icon-next.png', center, 100% 100%)
+
+.btn-main.btn-disables
+	color: $disable
+	border: 1px solid $disable
+	position: relative
+	background-color: $white
+	cursor: not-allowed
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next-gray.png', center, 100% 100%)
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:focus
+		background: none
+		background-color: $white !important
+		border: 1px solid $disable
+		color: $disable
+	// &:after
+	// 	content: ''
+	// 	width: 100%
+	// 	top: 0
+	// 	bottom: 0
+	// 	left: 0
+	// 	right: 0
+	// 	z-index: 99
 
 .btn-info-bordered
 	color: $blue

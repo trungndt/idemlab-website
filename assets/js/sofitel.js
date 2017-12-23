@@ -83,16 +83,20 @@
 
       Contact.init = function() {
         $(document).on('blur', '.form-item input, .form-item textarea', function() {
+          var isFormValid;
           if ($(this).val() !== '') {
             $(this).addClass('not-empty');
           } else {
             $(this).removeClass('not-empty');
           }
+          isFormValid = Contact.validateContactForm();
+          if (isFormValid) {
+            $('#formContact .btn').removeClass('btn-disables');
+          }
         });
         $(document).on('submit', '#formContact', function(e) {
           e.preventDefault();
-          console.log('validateContactForm');
-          return Contact.validateContactForm();
+          return console.log('validateContactForm');
         });
       };
 
@@ -102,14 +106,19 @@
         $form = $('#formContact');
         if ($form.find('.nice-select').val() === null) {
           $form.find('.nice-select').addClass('error');
+          valid = false;
+        } else {
+          $form.find('.nice-select').removeClass('error');
         }
         $.each($form.find('input, textarea'), function(i, e) {
           if ($(e).val() === '') {
-            return $(e).addClass('error');
+            $(e).addClass('error');
+            return valid = false;
           } else {
             return $(e).removeClass('error');
           }
         });
+        console.log(valid);
         return valid;
       };
 

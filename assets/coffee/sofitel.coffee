@@ -75,12 +75,16 @@ $ ->
 					$(this).addClass('not-empty')
 				else 
 					$(this).removeClass('not-empty')
+				isFormValid = Contact.validateContactForm()
+
+				if (isFormValid)
+					$('#formContact .btn').removeClass('btn-disables')
 				return
 
 			$(document).on 'submit', '#formContact', (e) ->
 				e.preventDefault()
 				console.log('validateContactForm')
-				do Contact.validateContactForm
+				# do Contact.validateContactForm
 			return
 
 		@validateContactForm: ->
@@ -88,11 +92,17 @@ $ ->
 			$form = $('#formContact')
 			if ($form.find('.nice-select').val() == null)
 				$form.find('.nice-select').addClass('error')
+				valid = false
+			else
+				$form.find('.nice-select').removeClass('error')
+			
 			$.each $form.find('input, textarea'), (i,e) ->
 				if ($(e).val() == '')
 					$(e).addClass('error')
+					valid = false
 				else 
 					$(e).removeClass('error')
+			console.log(valid)
 			valid
 
 	do General.init

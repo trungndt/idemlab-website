@@ -875,21 +875,14 @@ input:focus, select:focus, button:focus {
     .btn-white:hover:after, .btn-white:active:after, .btn-white:active:hover:after, .btn-white:focus:after {
       background: url("../images/icon/icon-next-blue.png") center/100% 100% no-repeat; }
 
-.btn-disables {
-  color: #999999;
-  border: 1px solid #999999;
-  position: relative;
-  background: #FFF; }
-  .btn-disables.btn-next:after {
-    background: url("../images/icon/icon-next-gray.png") center/100% 100% no-repeat; }
-
 .btn-main {
   color: #0095ff;
   position: relative;
   margin-top: 30px;
   border: 1px solid #0095ff;
   transition: all .2s;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: transparent; }
   .btn-main.btn-next:after {
     background: url("../images/icon/icon-next-blue.png") center/100% 100% no-repeat; }
   .btn-main:hover, .btn-main:active, .btn-main:active:hover, .btn-main:focus {
@@ -898,6 +891,20 @@ input:focus, select:focus, button:focus {
     border-color: transparent; }
     .btn-main:hover:after, .btn-main:active:after, .btn-main:active:hover:after, .btn-main:focus:after {
       background: url("../images/icon/icon-next.png") center/100% 100% no-repeat; }
+
+.btn-main.btn-disables {
+  color: #999999;
+  border: 1px solid #999999;
+  position: relative;
+  background-color: #FFF;
+  cursor: not-allowed; }
+  .btn-main.btn-disables.btn-next:after {
+    background: url("../images/icon/icon-next-gray.png") center/100% 100% no-repeat; }
+  .btn-main.btn-disables:hover, .btn-main.btn-disables:active, .btn-main.btn-disables:active:hover, .btn-main.btn-disables:focus {
+    background: none;
+    background-color: #FFF !important;
+    border: 1px solid #999999;
+    color: #999999; }
 
 .btn-info-bordered {
   color: #0095ff;
