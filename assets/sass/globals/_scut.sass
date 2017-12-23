@@ -293,7 +293,7 @@ $directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left')
 @each $tKey, $tVal in $clsTypes
 	@each $dKey, $dVal in $directions
 		@for $i from $minSpace through $maxSpace
-			.#{$tKey}#{$dKey}-#{$i}*5
+			.#{$tKey}#{$dKey}-#{$i*5}
 				#{$tVal}-#{$dVal}: $i * 5px !important
 
 

@@ -15,7 +15,6 @@ $ ->
 
 			$(document).on 'click', '[data-action="scroll"]', () ->
 				$target = $($(this).attr('href'))
-				console.log($target)
 				$('html, body').animate(
 						scrollTop: $target.offset().top - 100
 					)
@@ -23,7 +22,6 @@ $ ->
 
 			# Nav effects
 			$(document).on 'click', '.content-menu.dropdown a', (e) ->
-				console.log(this)
 				do e.preventDefault
 				return
 
@@ -48,7 +46,6 @@ $ ->
 						$nav.removeClass('nav-hide')
 				else
 					$nav.removeClass('fixed')
-				console.log(direction)
 				iScrollPos = wScroll
 				return
 			return
@@ -71,5 +68,34 @@ $ ->
 				return
 			return
 
+	class Contact
+		@init: ->
+			$(document).on 'blur', '.form-item input, .form-item textarea', () ->
+				if ($(this).val() != '')
+					$(this).addClass('not-empty')
+				else 
+					$(this).removeClass('not-empty')
+				return
+
+			$(document).on 'submit', '#formContact', (e) ->
+				e.preventDefault()
+				console.log('validateContactForm')
+				do Contact.validateContactForm
+			return
+
+		@validateContactForm: ->
+			valid = true
+			$form = $('#formContact')
+			if ($form.find('.nice-select').val() == null)
+				$form.find('.nice-select').addClass('error')
+			$.each $form.find('input, textarea'), (i,e) ->
+				if ($(e).val() == '')
+					$(e).addClass('error')
+				else 
+					$(e).removeClass('error')
+			valid
+
 	do General.init
 	do Homepage.init
+	do Contact.init
+	return

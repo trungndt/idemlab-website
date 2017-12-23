@@ -1,4 +1,4 @@
-input, select
+input, select, button
 	&:focus
 		outline: none !important
 
@@ -31,11 +31,12 @@ input, select
 	.option.disabled
 		background: transparent
 		color: $disable
+
 .character-input
 	border-radius: 25px
 	box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1)
 	border: solid 1px $gray-input
-	padding: 15px
+	padding: 20px
 	height: 52px
 	margin: 15px 0
 	position: relative
@@ -96,16 +97,17 @@ input, select
 	color: $disable
 	border: 1px solid $disable
 	position: relative
-	margin: 40px 0 50px
 	background: $white
-	&:after
-		content: ''
-		width: 100%
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		z-index: 99
+	&.btn-next:after
+		@include bgImage('../images/icon/icon-next-gray.png', center, 100% 100%)
+	// &:after
+	// 	content: ''
+	// 	width: 100%
+	// 	top: 0
+	// 	bottom: 0
+	// 	left: 0
+	// 	right: 0
+	// 	z-index: 99
 
 .btn-main 
 	color: $blue

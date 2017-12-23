@@ -4,7 +4,6 @@
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Noto+Serif|Rubik:400,500", rel:"stylesheet"}
-    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
@@ -73,43 +72,45 @@
         .row
           .col-md-8
             .form-content.text-center
-              %form
-                .inner-form.form-horizontal
+              %form.inner-form.form-horizontal#formContact
+                #sectionFormDefault
                   .form-group
-                    .group-form
+                    .form-item
                       %select#subject.nice-select.character-input.select-featrue
-                        %option{value:"",selected:"selected",disabled:"disabled"} Select a subject
+                        %option{value:"-1",selected:"selected",disabled:"disabled"} Select a subject
                         %option{value:"Sales"} Sales
                         %option{value:"Media"} Media
                         %option{value:"Apply for Partnership"} Apply for Partnership
                   .form-group
-                    .group-form
-                      %input.form-control.character-input{type:"text", required:"required"}
+                    .form-item
+                      %input.form-control.character-input{type:"text"}
                       %label{for:"name"} Your name
                   .form-group
-                    .group-form
-                      %input.form-control.character-input{type:"text", required:"required"}
+                    .form-item
+                      %input.form-control.character-input{type:"text"}
                       %label{for:"email"} Email address
                   .form-group
-                    .group-form
-                      %input.form-control.character-input{type:"text", required:"required"}
+                    .form-item
+                      %input.form-control.character-input{type:"text"}
                       %label{for:"company"} Company name
-                  .form-group
-                    .group-form
+                  .form-group.mb-40
+                    .form-item
                       %textarea.form-control.character-input{type:"text", placeholder:"Your message…", rows:"5"}
-              %a.btn.btn-disables{href:"#"}
-                SUBMIT MESSAGE
-                %img.icon-next-page{src:"assets/images/icon/icon-next-gray.png"}
-              .submit-done{style:"display:none"}
-                .img.title
-                  %img{src:"assets/images/icon/icon-successful.png"}
-                %p Thank you for your enquiry! We will be in contact with you at
-                  %br 
-                  %a{href:"#"} email@domain.com &nbsp   
-                  very soon. 
-                %a.btn.btn-main.none{href:"#"}
-                  GO TO HOME
-                  %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+                  .form-group
+                    %button.btn.btn-disables.btn-next{type:"submit"}
+                      SUBMIT MESSAGE
+                
+                #sectionFormSuccess.submit-done{style:"display:none"}
+                  .img.title
+                    %img{src:"assets/images/icon/icon-successful.png"}
+                  %p Thank you for your enquiry! We will be in contact with you at
+                    %br 
+                    %a{href:"#"} email@domain.com &nbsp   
+                    very soon. 
+                  %a.btn.btn-main.none{href:"#"}
+                    GO TO HOME
+                    %img.icon-next-page{src:"assets/images/icon/icon-next-blue.png"}
+          
           .col-md-4.text-center
             .inner.text-content
               .icon.title
@@ -178,7 +179,6 @@
             %p.copyright Copyright © 2017 Idem Labs Pte. Ltd.
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
-%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}

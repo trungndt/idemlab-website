@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var General, Homepage;
+    var Contact, General, Homepage;
     General = (function() {
       function General() {}
 
@@ -19,13 +19,11 @@
         $(document).on('click', '[data-action="scroll"]', function() {
           var $target;
           $target = $($(this).attr('href'));
-          console.log($target);
           $('html, body').animate({
             scrollTop: $target.offset().top - 100
           });
         });
         $(document).on('click', '.content-menu.dropdown a', function(e) {
-          console.log(this);
           e.preventDefault();
         });
         $('#subject').niceSelect();
@@ -51,7 +49,6 @@
           } else {
             $nav.removeClass('fixed');
           }
-          console.log(direction);
           iScrollPos = wScroll;
         });
       };
@@ -81,8 +78,47 @@
       return Homepage;
 
     })();
+    Contact = (function() {
+      function Contact() {}
+
+      Contact.init = function() {
+        $(document).on('blur', '.form-item input, .form-item textarea', function() {
+          if ($(this).val() !== '') {
+            $(this).addClass('not-empty');
+          } else {
+            $(this).removeClass('not-empty');
+          }
+        });
+        $(document).on('submit', '#formContact', function(e) {
+          e.preventDefault();
+          console.log('validateContactForm');
+          return Contact.validateContactForm();
+        });
+      };
+
+      Contact.validateContactForm = function() {
+        var $form, valid;
+        valid = true;
+        $form = $('#formContact');
+        if ($form.find('.nice-select').val() === null) {
+          $form.find('.nice-select').addClass('error');
+        }
+        $.each($form.find('input, textarea'), function(i, e) {
+          if ($(e).val() === '') {
+            return $(e).addClass('error');
+          } else {
+            return $(e).removeClass('error');
+          }
+        });
+        return valid;
+      };
+
+      return Contact;
+
+    })();
     General.init();
-    return Homepage.init();
+    Homepage.init();
+    Contact.init();
   });
 
 }).call(this);

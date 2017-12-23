@@ -11,37 +11,43 @@
 		box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3);
 		border-radius: 7px
 		color: $light-gray
-		.group-form
-			width: 74%
-			margin: auto
+		.form-item
+			// width: 74%
+			// margin: auto
 			// display: table
+			display: block
 			position: relative
 			label 
 				position: absolute
 				top: 30%
-				left: 15px
+				left: 20px
 				color: $disable
 				font-weight: normal
 				margin: 0
+				padding: 0 3px
 				transition: all 0.2s ease-in-out;
 			input
 				&:focus + label,
-				&:valid + label,
-				&[data-empty="false"] + label
+				&.not-empty + label
 					text-transform: uppercase
 					top: -7px
 					background: $white
 					transition: all 0.2s ease-in-out
 					color: $blue
+			input, textarea
+				&.error
+					@include bgImage('../images/icon/icon-dissable.png', right 15px top 13px, 24px 24px)
+			.nice-select.error span
+				color: $color-warning
 		.inner-form
-			padding-top: 40px
+			padding: 40px 80px
 	.text-center > .inner
 		margin-top: 40px
 	.inner
 		p 
 			font-size: 14px
 	.select-featrue
-		padding: 5px 15px
+		padding: 5px 20px
 
 // zoom bigger destop //
 @media (min-width: 1600px)
@@ -55,8 +61,8 @@
 		.content
 			width: 95%
 		.form-content
-			.group-form
-				width: 90%
+			.input-group
+				// width: 90%
 
 		.text-center > .inner
 			margin-top: 0
