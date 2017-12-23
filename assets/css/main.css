@@ -923,7 +923,8 @@ input:focus, select:focus {
       background: url("../images/icon/icon-next.png") center/100% 100% no-repeat; }
 
 textarea.form-control {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100% !important; }
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -1232,6 +1233,7 @@ img {
       width: auto; }
   .menu-main .navbar-brand {
     padding: 16px 35px;
+    height: 42px;
     display: none; }
   .menu-main .content-menu.brand {
     display: inline-block; }
@@ -1874,6 +1876,10 @@ footer {
 .idem-group-event .top-content p {
   font-size: 24px;
   color: #fff; }
+
+.idem-group-event .section-connect p {
+  font-size: 16px;
+  letter-spacing: .7; }
 
 .idem-group-event .section-connect strong {
   font-weight: 500; }
