@@ -54,7 +54,8 @@ $ ->
 		@setupFormValidation: (formId) ->
 			# Validate everytime an input is done editting
 			$form = $(formId)
-			$(document).on 'blur', formId + ' input, ' + formId + ' textarea', () ->
+			errorMarkElemSelector = formId + ' input, ' + formId + ' textarea'
+			$(document).on 'blur', errorMarkElemSelector, () ->
 				if ($(this).val() != '')
 					$(this).addClass('not-empty')
 				else 
@@ -66,6 +67,9 @@ $ ->
 				else
 					$form.data('valid', false)
 				return
+
+			$(document).on 'focus', errorMarkElemSelector, () ->
+				$(this).closest('.form-item').removeClass('error-mark')
 
 			# Check form state when submit
 			$(document).on 'submit', '#formContact', (e) ->
@@ -84,13 +88,16 @@ $ ->
 				# console.log($form.find('input, textarea'))
 
 				$.each $form.find('input, textarea'), (i,e) ->
-					console.log(e)
+					# console.log(e)
+					# console.log($form.find('input, textarea'))
 					if ($(e).val() == '')
-						console.log($(e).closest('.form-item'))
+						# console.log($(e).closest('.form-item'))
+						console.log($(e).is(':focus'))
 						$(e).closest('.form-item').addClass('error-mark')
 						valid = false
 					else 
 						$(e).closest('.form-item').removeClass('error-mark')
+					console.log('-----------------------')
 				valid
 			
 			showSuccessForm = ->

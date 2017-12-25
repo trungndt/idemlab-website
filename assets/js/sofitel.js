@@ -55,9 +55,10 @@
       };
 
       General.setupFormValidation = function(formId) {
-        var $form, showSuccessForm, validateFormElements;
+        var $form, errorMarkElemSelector, showSuccessForm, validateFormElements;
         $form = $(formId);
-        $(document).on('blur', formId + ' input, ' + formId + ' textarea', function() {
+        errorMarkElemSelector = formId + ' input, ' + formId + ' textarea';
+        $(document).on('blur', errorMarkElemSelector, function() {
           var isFormValid;
           if ($(this).val() !== '') {
             $(this).addClass('not-empty');
@@ -71,6 +72,9 @@
           } else {
             $form.data('valid', false);
           }
+        });
+        $(document).on('focus', errorMarkElemSelector, function() {
+          return $(this).closest('.form-item').removeClass('error-mark');
         });
         $(document).on('submit', '#formContact', function(e) {
           e.preventDefault();
@@ -86,14 +90,14 @@
             $form.find('.nice-select').removeClass('error');
           }
           $.each($form.find('input, textarea'), function(i, e) {
-            console.log(e);
             if ($(e).val() === '') {
-              console.log($(e).closest('.form-item'));
+              console.log($(e).is(':focus'));
               $(e).closest('.form-item').addClass('error-mark');
-              return valid = false;
+              valid = false;
             } else {
-              return $(e).closest('.form-item').removeClass('error-mark');
+              $(e).closest('.form-item').removeClass('error-mark');
             }
+            return console.log('-----------------------');
           });
           return valid;
         };
