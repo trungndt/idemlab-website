@@ -76,15 +76,19 @@ $ ->
 				else 
 					$(this).removeClass('not-empty')
 				isFormValid = Contact.validateContactForm()
-
+				$form = $('#formContact')
 				if (isFormValid)
-					$('#formContact .btn').removeClass('btn-disables')
+					$form.find('.btn').removeClass('btn-disables')
+					$form.addClass('form-valid')
+				else
+					$form.removeClass('form-valid')
 				return
 
 			$(document).on 'submit', '#formContact', (e) ->
 				e.preventDefault()
-				console.log('validateContactForm')
-				# do Contact.validateContactForm
+				console.log($(this))
+				if ($(this).hasClass('form-valid'))
+					do Contact.showSuccessForm
 			return
 
 		@validateContactForm: ->
@@ -105,6 +109,10 @@ $ ->
 			console.log(valid)
 			valid
 
+		@showSuccessForm: ->
+			$('#sectionFormDefault').hide()
+			$('#sectionFormSuccess').show()
+			return
 	do General.init
 	do Homepage.init
 	do Contact.init

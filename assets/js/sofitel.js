@@ -83,20 +83,27 @@
 
       Contact.init = function() {
         $(document).on('blur', '.form-item input, .form-item textarea', function() {
-          var isFormValid;
+          var $form, isFormValid;
           if ($(this).val() !== '') {
             $(this).addClass('not-empty');
           } else {
             $(this).removeClass('not-empty');
           }
           isFormValid = Contact.validateContactForm();
+          $form = $('#formContact');
           if (isFormValid) {
-            $('#formContact .btn').removeClass('btn-disables');
+            $form.find('.btn').removeClass('btn-disables');
+            $form.addClass('form-valid');
+          } else {
+            $form.removeClass('form-valid');
           }
         });
         $(document).on('submit', '#formContact', function(e) {
           e.preventDefault();
-          return console.log('validateContactForm');
+          console.log($(this));
+          if ($(this).hasClass('form-valid')) {
+            return Contact.showSuccessForm();
+          }
         });
       };
 
@@ -120,6 +127,11 @@
         });
         console.log(valid);
         return valid;
+      };
+
+      Contact.showSuccessForm = function() {
+        $('#sectionFormDefault').hide();
+        $('#sectionFormSuccess').show();
       };
 
       return Contact;
