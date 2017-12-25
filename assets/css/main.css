@@ -926,6 +926,10 @@ textarea.form-control {
   max-width: 100%;
   width: 100% !important; }
 
+@media (max-width: 992px) {
+  .btn {
+    font-size: 14.5px; } }
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1018,7 +1022,7 @@ img {
   padding-top: 5%; }
 
 .text-blue {
-  color: #0095ff; }
+  color: #0095ff !important; }
 
 .text-gray {
   color: #424242; }
@@ -1135,8 +1139,8 @@ img {
   h2 {
     font-size: 23px; }
   h3 {
-    font-size: 20px; }
-  p {
+    font-size: 23px; }
+  p, a {
     font-size: 14.5px; }
   .none {
     display: none; }
@@ -1155,7 +1159,9 @@ img {
     .banner-footer .oval-footer {
       background: none; }
   .text-footer-banner {
-    width: 80%ssssssssssssssssssss; }
+    width: 84%;
+    letter-spacing: .4;
+    line-height: 1.45; }
   .character-input {
     padding: 10px; }
   .btn-disables {
@@ -1414,13 +1420,20 @@ footer {
   footer input {
     padding: 10px; }
   footer .content {
-    width: 90%; }
+    width: 90% !important;
+    margin: auto; }
     footer .content .btn-main, footer .content .no-spam {
-      float: none; }
-    footer .content .no-spam {
-      margin-top: 20px; }
+      float: none !important; }
   footer #info-footer .menu-tab, footer #info-footer .logo-client {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  footer #subscribe .subscribe-footer {
+    margin-top: 10px; }
+    footer #subscribe .subscribe-footer .msg-default p {
+      font-size: 11px;
+      letter-spacing: 0.4;
+      opacity: .5; }
+  footer #subscribe .no-spam {
+    margin-bottom: 30px; } }
 
 .home .section-banner {
   position: relative;
@@ -1608,24 +1621,49 @@ footer {
       padding-left: 2%;
       padding-top: 30%; }
       .home .section-banner .caption h2 {
-        width: 75%; }
+        width: 90%;
+        letter-spacing: .2; }
   .home #solution h2 {
     margin: 40px 0 20px; }
   .home #solution .solution-right {
     float: none;
     width: 90%; }
-  .home #workflows, .home #info {
-    width: 90%; }
-    .home #workflows h3, .home #info h3 {
-      font-size: 23px; }
-    .home #workflows p, .home #info p {
-      font-size: 13px; }
+  .home #workflows {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px; }
+    .home #workflows .content-inner {
+      padding: 30px 10px; }
+    .home #workflows .inner p {
+      font-size: 12px; }
+    .home #workflows .inner .img-container {
+      width: 70%; }
+  .home #info {
+    width: 100%; }
+    .home #info h3 {
+      font-size: 23px;
+      letter-spacing: .2;
+      line-height: 1.39;
+      width: 90%;
+      margin: auto; }
+    .home #info p {
+      font-size: 14.5px;
+      line-height: 1.45;
+      letter-spacing: 0.4; }
+  .home .describe {
+    width: 92%;
+    margin: auto; }
+  .home #info .img-solution-right, .home #info .img-solution-left {
+    width: 80%; }
   .home #automate .content {
     width: 100%; }
   .home #automate .inner {
-    width: 100%; }
+    width: 90%;
+    margin: auto;
+    float: none;
+    padding-left: 0; }
   .home #automate .icon {
-    width: 16%;
+    width: 20%;
     margin-top: 30px; }
   .home .icon {
     display: table;
