@@ -721,7 +721,7 @@
       top: 0;
       width: 30px;
       height: 30px;
-      border: 1px solid #0095FF;
+      border: 1px solid #e0e0e0;
       background: #fff;
       border-radius: 50%; }
     .nice-check:checked + label:after, .nice-check:not(:checked) + label:after {
@@ -811,14 +811,18 @@ input:focus, select:focus, button:focus {
   background: transparent;
   color: #999999; }
 
+.form-horizontal .form-group {
+  margin-bottom: 30px; }
+
 .character-input {
   border-radius: 25px;
   box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1);
   border: solid 1px #e0e0e0;
   padding: 20px;
   height: 52px;
-  margin: 15px 0;
   position: relative; }
+  .character-input.select-featrue {
+    padding: 5px 20px; }
 
 .btn-active {
   border: 1px solid #0095ff; }
@@ -878,7 +882,6 @@ input:focus, select:focus, button:focus {
 .btn-main {
   color: #0095ff;
   position: relative;
-  margin-top: 30px;
   border: 1px solid #0095ff;
   transition: all .2s;
   box-sizing: border-box;
@@ -1668,13 +1671,11 @@ footer {
       #contact .form-content .form-item .nice-select.error span {
         color: #FF8303; }
     #contact .form-content .inner-form {
-      padding: 40px 80px; }
+      padding: 40px 80px 20px; }
   #contact .text-center > .inner {
     margin-top: 40px; }
   #contact .inner p {
     font-size: 14px; }
-  #contact .select-featrue {
-    padding: 5px 20px; }
 
 @media (min-width: 1600px) {
   #contact {
@@ -1948,11 +1949,15 @@ footer {
   margin: 20px 0; }
 
 #sign-up h2 {
-  margin: 20% 0 10%;
+  margin: 20% 0 5%;
   color: #FFF; }
 
 #sign-up h3 {
   margin-top: 80px; }
+
+#sign-up .sub-heading {
+  color: #777777;
+  letter-spacing: .6px; }
 
 #sign-up tr > td:first-child {
   width: 20%; }
@@ -1970,7 +1975,14 @@ footer {
   background: #FFF;
   border-radius: 7px; }
   #sign-up .featrue p {
-    font-size: 13px; }
+    font-size: 12px;
+    letter-spacing: .3px; }
+  #sign-up .featrue label {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    font-weight: normal;
+    color: #0095FF; }
   #sign-up .featrue .inner {
     padding: 30px; }
 
@@ -1982,7 +1994,7 @@ footer {
 #sign-up .inner-form {
   width: 74%;
   margin: auto;
-  padding-top: 40px; }
+  padding: 40px 0 60px; }
 
 #sign-up .input-group {
   padding: 12px; }
@@ -1991,6 +2003,10 @@ footer {
 
 #sign-up .character-input {
   margin: 15px 0; }
+
+#sign-up .nice-check + label {
+  margin-bottom: 10px;
+  font-size: 16px; }
 
 #sign-up .left, #sign-up .right {
   width: 48%; }

@@ -7,6 +7,7 @@
     %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
+    %link{href:"assets/plugins/tel-input/css/intlTelInput.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/css/main.css", rel:"stylesheet", type:"text/css"}
 
   %body
@@ -74,10 +75,9 @@
           .col-md-6
             .featrue
               .inner
-                .img
-                  %img{src:"assets/images/logo/IdemGroup.png"}
-                %p.text-blue MANAGE GROUP RESERVATIONS THE EASY WAY
-                %hr
+                %label IdemGroup
+                %p Manage group reservations the easy way
+                %hr.gradient
                 %table
                   %tr
                     %td
@@ -102,29 +102,28 @@
           .col-md-6
             .featrue
               .inner.right-table
-                .img
-                  %img{src:"assets/images/logo/IdemEvents.png"}
-                %p.text-blue ENGAGE WITH YOUR GUESTS IN MEANINGFUL WAYS
-                %hr
+                %label IdemEvents
+                %p Engage with your guests in meaningful ways
+                %hr.gradient
                 %p.text-left As with all Idem Labs customers, you will also receive:
                 %table
                   %tr
                     %td
                       %img{src:"assets/images/icon/icon-headphone.png"}
                     %td
-                      %p Stunning hotel & event branded microsites for group reservations
+                      %p Free local phone support
                   %tr
                     %td
                       %img{src:"assets/images/icon/icon-chat.png"}
                     %td
-                      %p Real time visibility into your group reservations
+                      %p Online chat & great conversations
                   %tr
                     %td
         %h3 Get Started
-        %p.margin-bottom Learn how the Idem solutions can help your hotel. Fill in this form and our sales 
+        %p.sub-heading.margin-bottom Learn how the Idem solutions can help your hotel. Fill in this form and our sales 
           %br
           representative will set up a Free Trial for you.
-        %form.group-form
+        %form.group-form#formSignUp
           .inner-form
             %input.form-control.character-input{type:"text", placeholder:"Your name"}
             .form-inline
@@ -140,21 +139,23 @@
               %input.form-control.character-input.right{type:"text", placeholder:"No. of rooms"}
             %select.nice-select.character-input.select-featrue
               %option{selected:"selected",disabled:"disabled"} Select your country
-            %hr
+              %option{value:""} Singapore
+              %option{value:""} USA
+              %option{value:""} Vietnam
+            %hr.gradient
             .text-left
               %p Select the product(s) you would like to sign up for:
               .checkbox
-                %label
-                  %input{type:"checkbox"} 
+                %input.nice-check.nice-check-sm#chkSignUpIdemGroup{type:"checkbox"} 
+                %label{for:"chkSignUpIdemGroup"}
                   IdemGroup
               .checkbox
-                %label
-                  %input{type:"checkbox"} 
+                %input.nice-check.nice-check-sm#chkSignUpIdemEvents{type:"checkbox"} 
+                %label{for:"chkSignUpIdemEvents"}
                   IdemEvents
               %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
-        %button.btn.btn-disables{href:"#"}
-          SIGN ME UP
-          %img.icon-next-page{src:"assets/images/icon/icon-next-gray.png"}
+            %button.btn.btn-main.btn-disables.btn-next{href:"#"}
+              SIGN ME UP
 
   %footer
       #subscribe
@@ -207,4 +208,5 @@
 %script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}
+%script{src:"assets/plugins/tel-input/js/intlTelInput.min.js", type:"text/javascript"}
 %script{src:"assets/js/sofitel.js", type:"text/javascript"}

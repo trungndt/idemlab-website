@@ -25,7 +25,7 @@ $ ->
 				do e.preventDefault
 				return
 
-			$('#subject').niceSelect()
+			$('.nice-select').niceSelect()
 			do General.setupFixedNavbar
 			return
 
@@ -50,6 +50,47 @@ $ ->
 				return
 			return
 
+		@setupFormValidation: ($form, callback) ->
+			# Validate everytime an input is done editting
+			$(document).on 'blur', 'input, textarea', () ->
+				if ($(this).val() != '')
+					$(this).addClass('not-empty')
+				else 
+					$(this).removeClass('not-empty')
+				isFormValid = validateFormElements()
+				if (isFormValid)
+					$form.find('.btn').removeClass('btn-disables')
+					$form.data('valid', true)
+				else
+					$form.data('valid', false)
+				return
+
+			# Check form state when submit
+			$(document).on 'submit', '#formContact', (e) ->
+				e.preventDefault()
+				console.log($(this))
+				if ($(this).data('valid') == true && callback?)
+					do callback
+				return
+
+			validateFormElements = ->
+				valid = true
+				if ($form.find('.nice-select').val() == null)
+					$form.find('.nice-select').addClass('error')
+					valid = false
+				else
+					$form.find('.nice-select').removeClass('error')
+				
+				$.each $form.find('input, textarea'), (i,e) ->
+					if ($(e).val() == '')
+						$(e).addClass('error')
+						valid = false
+					else 
+						$(e).removeClass('error')
+				console.log(valid)
+				valid
+			return
+
 	class Homepage
 		@init: ->
 			do this.handleSubscribeForm
@@ -70,50 +111,24 @@ $ ->
 
 	class Contact
 		@init: ->
-			$(document).on 'blur', '.form-item input, .form-item textarea', () ->
-				if ($(this).val() != '')
-					$(this).addClass('not-empty')
-				else 
-					$(this).removeClass('not-empty')
-				isFormValid = Contact.validateContactForm()
-				$form = $('#formContact')
-				if (isFormValid)
-					$form.find('.btn').removeClass('btn-disables')
-					$form.addClass('form-valid')
-				else
-					$form.removeClass('form-valid')
-				return
-
-			$(document).on 'submit', '#formContact', (e) ->
-				e.preventDefault()
-				console.log($(this))
-				if ($(this).hasClass('form-valid'))
-					do Contact.showSuccessForm
+			General.setupFormValidation($('#formContact'), Contact.showSuccessForm)
 			return
-
-		@validateContactForm: ->
-			valid = true
-			$form = $('#formContact')
-			if ($form.find('.nice-select').val() == null)
-				$form.find('.nice-select').addClass('error')
-				valid = false
-			else
-				$form.find('.nice-select').removeClass('error')
-			
-			$.each $form.find('input, textarea'), (i,e) ->
-				if ($(e).val() == '')
-					$(e).addClass('error')
-					valid = false
-				else 
-					$(e).removeClass('error')
-			console.log(valid)
-			valid
-
 		@showSuccessForm: ->
 			$('#sectionFormDefault').hide()
 			$('#sectionFormSuccess').show()
 			return
+
+	class SignUp
+		@init: ->
+			General.setupFormValidation($('#formSignUp'))
+			return
+		# @showSuccessForm: ->
+		# 	$('#sectionFormDefault').hide()
+		# 	$('#sectionFormSuccess').show()
+			return
+
 	do General.init
 	do Homepage.init
 	do Contact.init
+	do SignUp.init
 	return

@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var Contact, General, Homepage;
+    var Contact, General, Homepage, SignUp;
     General = (function() {
       function General() {}
 
@@ -26,7 +26,7 @@
         $(document).on('click', '.content-menu.dropdown a', function(e) {
           e.preventDefault();
         });
-        $('#subject').niceSelect();
+        $('.nice-select').niceSelect();
         General.setupFixedNavbar();
       };
 
@@ -51,6 +51,52 @@
           }
           iScrollPos = wScroll;
         });
+      };
+
+      General.setupFormValidation = function($form, callback) {
+        var validateFormElements;
+        $(document).on('blur', 'input, textarea', function() {
+          var isFormValid;
+          if ($(this).val() !== '') {
+            $(this).addClass('not-empty');
+          } else {
+            $(this).removeClass('not-empty');
+          }
+          isFormValid = validateFormElements();
+          if (isFormValid) {
+            $form.find('.btn').removeClass('btn-disables');
+            $form.data('valid', true);
+          } else {
+            $form.data('valid', false);
+          }
+        });
+        $(document).on('submit', '#formContact', function(e) {
+          e.preventDefault();
+          console.log($(this));
+          if ($(this).data('valid') === true && (callback != null)) {
+            callback();
+          }
+        });
+        validateFormElements = function() {
+          var valid;
+          valid = true;
+          if ($form.find('.nice-select').val() === null) {
+            $form.find('.nice-select').addClass('error');
+            valid = false;
+          } else {
+            $form.find('.nice-select').removeClass('error');
+          }
+          $.each($form.find('input, textarea'), function(i, e) {
+            if ($(e).val() === '') {
+              $(e).addClass('error');
+              return valid = false;
+            } else {
+              return $(e).removeClass('error');
+            }
+          });
+          console.log(valid);
+          return valid;
+        };
       };
 
       return General;
@@ -82,51 +128,7 @@
       function Contact() {}
 
       Contact.init = function() {
-        $(document).on('blur', '.form-item input, .form-item textarea', function() {
-          var $form, isFormValid;
-          if ($(this).val() !== '') {
-            $(this).addClass('not-empty');
-          } else {
-            $(this).removeClass('not-empty');
-          }
-          isFormValid = Contact.validateContactForm();
-          $form = $('#formContact');
-          if (isFormValid) {
-            $form.find('.btn').removeClass('btn-disables');
-            $form.addClass('form-valid');
-          } else {
-            $form.removeClass('form-valid');
-          }
-        });
-        $(document).on('submit', '#formContact', function(e) {
-          e.preventDefault();
-          console.log($(this));
-          if ($(this).hasClass('form-valid')) {
-            return Contact.showSuccessForm();
-          }
-        });
-      };
-
-      Contact.validateContactForm = function() {
-        var $form, valid;
-        valid = true;
-        $form = $('#formContact');
-        if ($form.find('.nice-select').val() === null) {
-          $form.find('.nice-select').addClass('error');
-          valid = false;
-        } else {
-          $form.find('.nice-select').removeClass('error');
-        }
-        $.each($form.find('input, textarea'), function(i, e) {
-          if ($(e).val() === '') {
-            $(e).addClass('error');
-            return valid = false;
-          } else {
-            return $(e).removeClass('error');
-          }
-        });
-        console.log(valid);
-        return valid;
+        General.setupFormValidation($('#formContact'), Contact.showSuccessForm);
       };
 
       Contact.showSuccessForm = function() {
@@ -137,9 +139,21 @@
       return Contact;
 
     })();
+    SignUp = (function() {
+      function SignUp() {}
+
+      SignUp.init = function() {
+        General.setupFormValidation($('#formSignUp'));
+        return;
+      };
+
+      return SignUp;
+
+    })();
     General.init();
     Homepage.init();
     Contact.init();
+    SignUp.init();
   });
 
 }).call(this);

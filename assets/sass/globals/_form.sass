@@ -32,14 +32,21 @@ input, select, button
 		background: transparent
 		color: $disable
 
+// Form
+.form-horizontal
+	.form-group
+		margin-bottom: 30px
 .character-input
 	border-radius: 25px
 	box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1)
 	border: solid 1px $gray-input
 	padding: 20px
 	height: 52px
-	margin: 15px 0
 	position: relative
+	&.select-featrue
+		padding: 5px 20px
+
+// Buttons
 .btn-active
 	border: 1px solid $blue
 
@@ -96,7 +103,6 @@ input, select, button
 .btn-main 
 	color: $blue
 	position: relative
-	margin-top: 30px
 	border: 1px solid $blue
 	transition: all .2s
 	box-sizing: border-box
