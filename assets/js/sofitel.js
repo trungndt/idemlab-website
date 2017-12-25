@@ -28,6 +28,7 @@
         });
         $('.nice-select').niceSelect();
         General.setupFixedNavbar();
+        General.setupTelInput();
       };
 
       General.setupFixedNavbar = function() {
@@ -53,9 +54,10 @@
         });
       };
 
-      General.setupFormValidation = function($form, callback) {
-        var validateFormElements;
-        $(document).on('blur', 'input, textarea', function() {
+      General.setupFormValidation = function(formId) {
+        var $form, showSuccessForm, validateFormElements;
+        $form = $(formId);
+        $(document).on('blur', formId + ' input, ' + formId + ' textarea', function() {
           var isFormValid;
           if ($(this).val() !== '') {
             $(this).addClass('not-empty');
@@ -72,10 +74,7 @@
         });
         $(document).on('submit', '#formContact', function(e) {
           e.preventDefault();
-          console.log($(this));
-          if ($(this).data('valid') === true && (callback != null)) {
-            callback();
-          }
+          showSuccessForm();
         });
         validateFormElements = function() {
           var valid;
@@ -87,16 +86,27 @@
             $form.find('.nice-select').removeClass('error');
           }
           $.each($form.find('input, textarea'), function(i, e) {
+            console.log(e);
             if ($(e).val() === '') {
-              $(e).addClass('error');
+              console.log($(e).closest('.form-item'));
+              $(e).closest('.form-item').addClass('error-mark');
               return valid = false;
             } else {
-              return $(e).removeClass('error');
+              return $(e).closest('.form-item').removeClass('error-mark');
             }
           });
-          console.log(valid);
           return valid;
         };
+        showSuccessForm = function() {
+          $('#sectionFormDefault').hide();
+          $('#sectionFormSuccess').show();
+        };
+      };
+
+      General.setupTelInput = function() {
+        if (($('.tel-input').length)) {
+          $('.tel-input').intlTelInput();
+        }
       };
 
       return General;
@@ -128,12 +138,7 @@
       function Contact() {}
 
       Contact.init = function() {
-        General.setupFormValidation($('#formContact'), Contact.showSuccessForm);
-      };
-
-      Contact.showSuccessForm = function() {
-        $('#sectionFormDefault').hide();
-        $('#sectionFormSuccess').show();
+        General.setupFormValidation('#formContact');
       };
 
       return Contact;
@@ -143,7 +148,7 @@
       function SignUp() {}
 
       SignUp.init = function() {
-        General.setupFormValidation($('#formSignUp'));
+        General.setupFormValidation('#formSignUp');
         return;
       };
 

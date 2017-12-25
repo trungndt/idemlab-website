@@ -125,37 +125,58 @@
           representative will set up a Free Trial for you.
         %form.group-form#formSignUp
           .inner-form
-            %input.form-control.character-input{type:"text", placeholder:"Your name"}
-            .form-inline
-              %input.form-control.character-input.left{type:"email", placeholder:"Email address"}
-              .input-group.form-control.character-input.right
-                .input-group-btn
-                  %select.image-dd
-                    %option{value:"+65", data-image:"assets/images/flag/flag-sing.png"}
-                    %option{value:"+99", data-image:"assets/images/flag/flag-uk.png"}
-                %input{type:"phone", placeholder:"Phone Number"}
-            .form-inline
-              %input.form-control.character-input.left{type:"text", placeholder:"Property name"}
-              %input.form-control.character-input.right{type:"text", placeholder:"No. of rooms"}
-            %select.nice-select.character-input.select-featrue
-              %option{selected:"selected",disabled:"disabled"} Select your country
-              %option{value:""} Singapore
-              %option{value:""} USA
-              %option{value:""} Vietnam
-            %hr.gradient
-            .text-left
-              %p Select the product(s) you would like to sign up for:
-              .checkbox
-                %input.nice-check.nice-check-sm#chkSignUpIdemGroup{type:"checkbox"} 
-                %label{for:"chkSignUpIdemGroup"}
-                  IdemGroup
-              .checkbox
-                %input.nice-check.nice-check-sm#chkSignUpIdemEvents{type:"checkbox"} 
-                %label{for:"chkSignUpIdemEvents"}
-                  IdemEvents
-              %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
-            %button.btn.btn-main.btn-disables.btn-next{href:"#"}
-              SIGN ME UP
+            #sectionFormDefault
+              .form-group
+                .form-item
+                  %input.form-control.character-input{type:"text", placeholder:"Your name"}
+              .form-group
+                .row
+                  .col-sm-6
+                    .form-item
+                      %input.form-control.character-input{type:"email", placeholder:"Email address"}
+                  .col-sm-6
+                    .form-item
+                      %input.tel-input{type:"phone", placeholder:"Phone Number"}
+              .form-group
+                .row
+                  .col-sm-6
+                    .form-item
+                      %input.form-control.character-input{type:"text", placeholder:"Property name"}
+                  .col-sm-6
+                    .form-item
+                      %input.form-control.character-input{type:"text", placeholder:"No. of rooms"}
+              .form-group
+                %select.nice-select.character-input.select-featrue
+                  %option{selected:"selected",disabled:"disabled"} Select your country
+                  %option{value:""} Singapore
+                  %option{value:""} USA
+                  %option{value:""} Vietnam
+              %hr.gradient
+              .form-group
+                .text-left
+                  %p Select the product(s) you would like to sign up for:
+                  .checkbox
+                    %input.nice-check.nice-check-sm#chkSignUpIdemGroup{type:"checkbox"} 
+                    %label{for:"chkSignUpIdemGroup"}
+                      IdemGroup
+                  .checkbox
+                    %input.nice-check.nice-check-sm#chkSignUpIdemEvents{type:"checkbox"} 
+                    %label{for:"chkSignUpIdemEvents"}
+                      IdemEvents
+              .form-group
+                %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
+              .form-group
+                %button.btn.btn-main.btn-disables.btn-next{type:"submit"} SUBMIT MESSAGE
+
+            #sectionFormSuccess.submit-done{style:"display:none"}
+              .img.title
+                %img{src:"assets/images/icon/icon-successful.png"}
+              %p Thank you for your enquiry! We will be in contact with you at
+                %br 
+                %a{href:"#"} email@domain.com &nbsp   
+                very soon. 
+              %a.btn.btn-main.btn-next.none{href:"/"}
+                GO TO HOME
 
   %footer
       #subscribe

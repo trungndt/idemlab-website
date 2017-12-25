@@ -27,6 +27,7 @@ $ ->
 
 			$('.nice-select').niceSelect()
 			do General.setupFixedNavbar
+			do General.setupTelInput
 			return
 
 		@setupFixedNavbar: ->
@@ -50,9 +51,10 @@ $ ->
 				return
 			return
 
-		@setupFormValidation: ($form, callback) ->
+		@setupFormValidation: (formId) ->
 			# Validate everytime an input is done editting
-			$(document).on 'blur', 'input, textarea', () ->
+			$form = $(formId)
+			$(document).on 'blur', formId + ' input, ' + formId + ' textarea', () ->
 				if ($(this).val() != '')
 					$(this).addClass('not-empty')
 				else 
@@ -68,9 +70,7 @@ $ ->
 			# Check form state when submit
 			$(document).on 'submit', '#formContact', (e) ->
 				e.preventDefault()
-				console.log($(this))
-				if ($(this).data('valid') == true && callback?)
-					do callback
+				showSuccessForm()
 				return
 
 			validateFormElements = ->
@@ -81,16 +81,29 @@ $ ->
 				else
 					$form.find('.nice-select').removeClass('error')
 				
+				# console.log($form.find('input, textarea'))
+
 				$.each $form.find('input, textarea'), (i,e) ->
+					console.log(e)
 					if ($(e).val() == '')
-						$(e).addClass('error')
+						console.log($(e).closest('.form-item'))
+						$(e).closest('.form-item').addClass('error-mark')
 						valid = false
 					else 
-						$(e).removeClass('error')
-				console.log(valid)
+						$(e).closest('.form-item').removeClass('error-mark')
 				valid
+			
+			showSuccessForm = ->
+				$('#sectionFormDefault').hide()
+				$('#sectionFormSuccess').show()
+				return
+
 			return
 
+		@setupTelInput: ->
+			if ($('.tel-input').length)
+				$('.tel-input').intlTelInput()
+			return
 	class Homepage
 		@init: ->
 			do this.handleSubscribeForm
@@ -111,20 +124,12 @@ $ ->
 
 	class Contact
 		@init: ->
-			General.setupFormValidation($('#formContact'), Contact.showSuccessForm)
+			General.setupFormValidation('#formContact')
 			return
-		@showSuccessForm: ->
-			$('#sectionFormDefault').hide()
-			$('#sectionFormSuccess').show()
-			return
-
 	class SignUp
 		@init: ->
-			General.setupFormValidation($('#formSignUp'))
+			General.setupFormValidation('#formSignUp')
 			return
-		# @showSuccessForm: ->
-		# 	$('#sectionFormDefault').hide()
-		# 	$('#sectionFormSuccess').show()
 			return
 
 	do General.init
