@@ -1195,7 +1195,9 @@ img {
   .btn-disables {
     margin: 0 0 50px; }
   .top-content {
-    padding: 100px 0 40px; } }
+    padding: 100px 0 40px; }
+    .top-content p {
+      font-size: 17px; } }
 
 .menu-top {
   position: absolute;
@@ -1447,6 +1449,8 @@ footer {
 @media (max-width: 992px) {
   footer input {
     padding: 10px; }
+  footer h3 ~ p {
+    font-size: 13px; }
   footer .content {
     width: 90% !important;
     margin: auto; }
@@ -1835,7 +1839,13 @@ footer {
     width: 100%;
     float: none; }
   #company .distance {
-    margin-right: 0; } }
+    margin-right: 0; }
+  #company .top-content p {
+    font-size: 17px; }
+  #company .top-content span {
+    font-size: 13px; }
+  #company .bot-content {
+    padding: 40px 0 0; } }
 
 #partner h2 {
   color: #FFF; }
@@ -1847,6 +1857,9 @@ footer {
 #partner span {
   font-size: 24px;
   color: #FFF; }
+
+#partner a {
+  margin-top: 60px; }
 
 #partner .container {
   width: 74%; }
@@ -1874,6 +1887,9 @@ footer {
 #partner .img {
   margin-bottom: 20%; }
 
+#partner .top-content h2 {
+  width: 60%; }
+
 #partner .bot-content p {
   margin-bottom: 40px;
   color: #777777;
@@ -1884,16 +1900,33 @@ footer {
     font-size: 30px; } }
 
 @media (max-width: 992px) {
+  #partner a {
+    margin: 20px 0 60px; }
+  #partner p {
+    font-size: 13px; }
+  #partner .bg-oval {
+    background: url("../images/oval/mobile-oval.png") 0 -20%/95% no-repeat; }
   #partner .container {
     width: 100%; }
-  #partner .bot-content .container {
-    width: 95%; }
+  #partner .top-content h2 {
+    width: 100%; }
+  #partner .top-content p {
+    font-size: 17px; }
+  #partner .bot-content {
+    padding: 20px 0 0; }
+    #partner .bot-content .container {
+      width: 95%; }
+    #partner .bot-content .col-md-4 {
+      padding: 0; }
   #partner .text-inner {
-    width: 95%;
-    margin: 0 auto; }
+    width: 100%;
+    margin: auto; }
   #partner .featrue {
     height: auto;
-    margin-top: 40px; } }
+    margin-top: 40px; }
+  #partner .text-gradient {
+    font-size: 20px;
+    width: 100%; } }
 
 .text-gradient {
   width: 240px;
@@ -2070,7 +2103,8 @@ footer {
 
 #sign-up .featrue {
   background: #FFF;
-  border-radius: 7px; }
+  border-radius: 7px;
+  box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3); }
   #sign-up .featrue p {
     font-size: 12px;
     letter-spacing: .3px; }
@@ -2129,4 +2163,6 @@ footer {
   #sign-up .container, #sign-up .inner-form, #sign-up .left, #sign-up .right {
     width: 100%; }
   #sign-up .right {
-    margin: 0; } }
+    margin: 0; }
+  #sign-up .featrue {
+    margin-bottom: 10px; } }
