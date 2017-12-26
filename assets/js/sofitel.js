@@ -44,6 +44,8 @@
             $nav.addClass('fixed');
             if (direction === 'up') {
               $nav.addClass('nav-hide');
+              $nav.find('.collapse.in').removeClass('in');
+              $nav.find('.navbar-toggle').addClass('collapsed');
             } else {
               $nav.removeClass('nav-hide');
             }
