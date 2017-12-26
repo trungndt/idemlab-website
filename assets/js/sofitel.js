@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    var Contact, General, Homepage;
+    var Contact, General, Homepage, SignUp;
     General = (function() {
       function General() {}
 
@@ -26,8 +26,9 @@
         $(document).on('click', '.content-menu.dropdown a', function(e) {
           e.preventDefault();
         });
-        $('#subject').niceSelect();
+        $('.nice-select').niceSelect();
         General.setupFixedNavbar();
+        General.setupTelInput();
       };
 
       General.setupFixedNavbar = function() {
@@ -51,6 +52,65 @@
           }
           iScrollPos = wScroll;
         });
+      };
+
+      General.setupFormValidation = function(formId) {
+        var $form, errorMarkElemSelector, showSuccessForm, validateFormElements;
+        $form = $(formId);
+        errorMarkElemSelector = formId + ' input, ' + formId + ' textarea';
+        $(document).on('blur', errorMarkElemSelector, function() {
+          var isFormValid;
+          if ($(this).val() !== '') {
+            $(this).addClass('not-empty');
+          } else {
+            $(this).removeClass('not-empty');
+          }
+          isFormValid = validateFormElements();
+          if (isFormValid) {
+            $form.find('.btn').removeClass('btn-disables');
+            $form.data('valid', true);
+          } else {
+            $form.data('valid', false);
+          }
+        });
+        $(document).on('focus', errorMarkElemSelector, function() {
+          return $(this).closest('.form-item').removeClass('error-mark');
+        });
+        $(document).on('submit', '#formContact', function(e) {
+          e.preventDefault();
+          showSuccessForm();
+        });
+        validateFormElements = function() {
+          var valid;
+          valid = true;
+          if ($form.find('.nice-select').val() === null) {
+            $form.find('.nice-select').addClass('error');
+            valid = false;
+          } else {
+            $form.find('.nice-select').removeClass('error');
+          }
+          $.each($form.find('input, textarea'), function(i, e) {
+            if ($(e).val() === '') {
+              console.log($(e).is(':focus'));
+              $(e).closest('.form-item').addClass('error-mark');
+              valid = false;
+            } else {
+              $(e).closest('.form-item').removeClass('error-mark');
+            }
+            return console.log('-----------------------');
+          });
+          return valid;
+        };
+        showSuccessForm = function() {
+          $('#sectionFormDefault').hide();
+          $('#sectionFormSuccess').show();
+        };
+      };
+
+      General.setupTelInput = function() {
+        if (($('.tel-input').length)) {
+          $('.tel-input').intlTelInput();
+        }
       };
 
       return General;
@@ -82,64 +142,27 @@
       function Contact() {}
 
       Contact.init = function() {
-        $(document).on('blur', '.form-item input, .form-item textarea', function() {
-          var $form, isFormValid;
-          if ($(this).val() !== '') {
-            $(this).addClass('not-empty');
-          } else {
-            $(this).removeClass('not-empty');
-          }
-          isFormValid = Contact.validateContactForm();
-          $form = $('#formContact');
-          if (isFormValid) {
-            $form.find('.btn').removeClass('btn-disables');
-            $form.addClass('form-valid');
-          } else {
-            $form.removeClass('form-valid');
-          }
-        });
-        $(document).on('submit', '#formContact', function(e) {
-          e.preventDefault();
-          console.log($(this));
-          if ($(this).hasClass('form-valid')) {
-            return Contact.showSuccessForm();
-          }
-        });
-      };
-
-      Contact.validateContactForm = function() {
-        var $form, valid;
-        valid = true;
-        $form = $('#formContact');
-        if ($form.find('.nice-select').val() === null) {
-          $form.find('.nice-select').addClass('error');
-          valid = false;
-        } else {
-          $form.find('.nice-select').removeClass('error');
-        }
-        $.each($form.find('input, textarea'), function(i, e) {
-          if ($(e).val() === '') {
-            $(e).addClass('error');
-            return valid = false;
-          } else {
-            return $(e).removeClass('error');
-          }
-        });
-        console.log(valid);
-        return valid;
-      };
-
-      Contact.showSuccessForm = function() {
-        $('#sectionFormDefault').hide();
-        $('#sectionFormSuccess').show();
+        General.setupFormValidation('#formContact');
       };
 
       return Contact;
 
     })();
+    SignUp = (function() {
+      function SignUp() {}
+
+      SignUp.init = function() {
+        General.setupFormValidation('#formSignUp');
+        return;
+      };
+
+      return SignUp;
+
+    })();
     General.init();
     Homepage.init();
     Contact.init();
+    SignUp.init();
   });
 
 }).call(this);

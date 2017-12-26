@@ -32,14 +32,26 @@ input, select, button
 		background: transparent
 		color: $disable
 
+// Form
+.form-group
+	margin-bottom: 30px
+
 .character-input
 	border-radius: 25px
 	box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.1)
 	border: solid 1px $gray-input
-	padding: 20px
+	padding: 10px 20px
 	height: 52px
-	margin: 15px 0
 	position: relative
+	&.select-featrue
+		padding: 5px 20px
+
+.form-item
+	&.error-mark
+		@include bgImage('../images/icon/icon-dissable.png', right 15px top 13px, 24px 24px)
+	.form-control
+		background-color: transparent
+// Buttons
 .btn-active
 	border: 1px solid $blue
 
@@ -96,7 +108,6 @@ input, select, button
 .btn-main 
 	color: $blue
 	position: relative
-	margin-top: 30px
 	border: 1px solid $blue
 	transition: all .2s
 	box-sizing: border-box
@@ -160,6 +171,29 @@ input, select, button
 textarea.form-control
 	max-width: 100%
 	width: 100% !important
+
+
+// Tel Input
+.intl-tel-input.allow-dropdown
+	@extend .form-control, .character-input
+	display: block
+	.flag-container:focus,
+	.selected-flag:focus
+		outline: none !important
+	.flag-container:hover .selected-flag
+		background-color: transparent
+	.selected-flag
+		left: 12px
+	input
+		padding: 0 20px
+		border: none
+		line-height: 2.2
+		height: auto
+	.country-list
+		width: 300px
+
+		span
+			font-size: 12px
 
 @media (max-width: 992px) 
 	.btn 
