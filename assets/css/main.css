@@ -1266,6 +1266,8 @@ img {
   .menu-main .brand {
     height: 48px;
     box-sizing: content-box; }
+    .menu-main .brand a {
+      display: inline-block; }
     .menu-main .brand img {
       height: 100%;
       width: auto; }
@@ -1339,7 +1341,9 @@ img {
   .menu-main.fixed.nav-hide {
     top: -75px; }
   .menu-main.fixed .navbar-brand {
-    display: block; }
+    display: block;
+    position: relative;
+    z-index: 1; }
   .menu-main.fixed .content-menu.brand {
     display: none; }
   .menu-main.fixed:after {
