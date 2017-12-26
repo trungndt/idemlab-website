@@ -3,6 +3,7 @@
 		font-size: 38px
 		letter-spacing: .5
 		line-height: 1.3
+		width: 70%
 	h2, h3
 		color: $gray
 	h2
@@ -41,10 +42,12 @@
 		font-size: 16px
 		display: inline-block
 	
-	.top-content p
-		font-size: 24px
-		color: #fff
-	
+	.top-content 
+		p
+			font-size: 24px
+			color: #fff
+		a 
+			margin-top: 30px
 	.section-connect
 		p
 			font-size: 16px
@@ -78,13 +81,38 @@
 				font-size: 30px
 // responsive mobile
 @media (max-width: 992px)
-	#idem-group-event
-		h3
+	.idem-group-event
+		h1, h2
 			font-size: 23px
+			line-height: 1.39
+			letter-spacing: .2
+		h2
+			margin-top: 40px
+		h3
+			font-size: 20px
+			line-height: 1.4
+			letter-spacing: .2
+		label
+			margin-top: 30px
+			&:first-child
+				margin-bottom: 40px
 		.img 
 			text-align: center
 		.key-features
+			margin-top: 50px
 			a
 				display: none
+		.section-connect
+			p
+				font-size: 13px
+				letter-spacing: .3
+				line-height: 1.46
+				text-align: left
+		.key-features-list
+			padding: 0
+		.bot-content
+			padding: 0
+		.gradient
+			margin: 30px 0
 		#first-feature
 			margin-top: 40px
