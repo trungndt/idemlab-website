@@ -72,7 +72,7 @@ $ ->
 				$(this).closest('.form-item').removeClass('error-mark')
 
 			# Check form state when submit
-			$(document).on 'submit', '#formContact', (e) ->
+			$(document).on 'submit', formId, (e) ->
 				e.preventDefault()
 				showSuccessForm()
 				return
@@ -111,6 +111,8 @@ $ ->
 			if ($('.tel-input').length)
 				$('.tel-input').intlTelInput()
 			return
+	
+
 	class Homepage
 		@init: ->
 			do this.handleSubscribeForm
@@ -129,14 +131,15 @@ $ ->
 				return
 			return
 
+	
 	class Contact
 		@init: ->
 			General.setupFormValidation('#formContact')
 			return
+	
 	class SignUp
 		@init: ->
 			General.setupFormValidation('#formSignUp')
-			return
 			return
 
 	do General.init

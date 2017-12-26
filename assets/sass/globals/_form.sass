@@ -27,11 +27,12 @@ input, select, button
 	.option.selected
 		font-weight: normal
 		background-image: linear-gradient(100deg, rgba(1, 212, 126, 0.3), rgba(0, 149, 255, 0.3))
-.nice-selec
 	.option.disabled
 		background: transparent
 		color: $disable
-
+		display: none
+	&.error .current
+		color: $color-warning
 // Form
 .form-group
 	margin-bottom: 30px
@@ -51,6 +52,7 @@ input, select, button
 		@include bgImage('../images/icon/icon-dissable.png', right 15px top 13px, 24px 24px)
 	.form-control
 		background-color: transparent
+
 // Buttons
 .btn-active
 	border: 1px solid $blue
@@ -189,6 +191,7 @@ textarea.form-control
 		border: none
 		line-height: 2.2
 		height: auto
+		background-color: transparent
 	.country-list
 		width: 300px
 

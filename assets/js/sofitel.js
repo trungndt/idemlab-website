@@ -76,7 +76,7 @@
         $(document).on('focus', errorMarkElemSelector, function() {
           return $(this).closest('.form-item').removeClass('error-mark');
         });
-        $(document).on('submit', '#formContact', function(e) {
+        $(document).on('submit', formId, function(e) {
           e.preventDefault();
           showSuccessForm();
         });
@@ -153,7 +153,6 @@
 
       SignUp.init = function() {
         General.setupFormValidation('#formSignUp');
-        return;
       };
 
       return SignUp;

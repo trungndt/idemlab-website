@@ -69,7 +69,7 @@
               %a.btn.btn-info.btn-next{href:"#"} SIGN UP FREE
       
     #sign-up.bg-oval
-      .container.text-center
+      .container.container-sm.text-center
         %h2.margin-bottom Try Idem for Free
         .row
           .col-md-6
@@ -147,7 +147,7 @@
                       %input.form-control.character-input{type:"text", placeholder:"No. of rooms"}
               .form-group
                 %select.nice-select.character-input.select-featrue
-                  %option{selected:"selected",disabled:"disabled"} Select your country
+                  %option{value:"-1",selected:"selected",disabled:"disabled"} Select your country
                   %option{value:""} Singapore
                   %option{value:""} USA
                   %option{value:""} Vietnam
@@ -164,14 +164,15 @@
                     %label{for:"chkSignUpIdemEvents"}
                       IdemEvents
               .form-group
-                %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
+                .form-item
+                  %textarea.form-control.character-input{placeholder:"Comments…", rows:"4"}
               .form-group
                 %button.btn.btn-main.btn-disables.btn-next{type:"submit"} SUBMIT MESSAGE
 
             #sectionFormSuccess.submit-done{style:"display:none"}
               .img.title
                 %img{src:"assets/images/icon/icon-successful.png"}
-              %p Thank you for your enquiry! We will be in contact with you at
+              %p.mb-30 Thank you for your enquiry! We will be in contact with you at
                 %br 
                 %a{href:"#"} email@domain.com &nbsp   
                 very soon. 
