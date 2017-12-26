@@ -1413,11 +1413,12 @@ img {
         .menu-main ul.navbar li.content-menu .text-blue {
           color: #fff; }
         .menu-main ul.navbar li.content-menu.has-button {
-          text-align: center; }
+          text-align: center;
+          margin-top: 15px; }
           .menu-main ul.navbar li.content-menu.has-button a {
             display: inline-block;
-            min-width: 155px;
-            padding: 12px 20px;
+            min-width: 170px;
+            padding: 10px 20px;
             text-align: left; }
         .menu-main ul.navbar li.content-menu.brand {
           display: none; }
@@ -1469,7 +1470,7 @@ img {
     .menu-main .panel-support {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 10px 20px;
-      margin: 30px -20px 0;
+      margin: 40px -20px 0;
       -webkit-box-shadow: 0 1px 0 0 #777 inset;
       -moz-box-shadow: 0 1px 0 0 #777 inset;
       -ms-box-shadow: 0 1px 0 0 #777 inset;
@@ -1477,7 +1478,8 @@ img {
       box-shadow: 0 1px 0 0 #777 inset; }
       .menu-main .panel-support a {
         color: #fff;
-        text-decoration: none; }
+        text-decoration: none;
+        font-size: 11px; }
         .menu-main .panel-support a:hover, .menu-main .panel-support a:active, .menu-main .panel-support a:focus {
           text-decoration: none; }
   .dropdown-backdrop {
