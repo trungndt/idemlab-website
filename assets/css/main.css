@@ -1367,14 +1367,38 @@ img {
   z-index: 99; }
 
 @media (max-width: 992px) {
+  .container > .navbar-header {
+    margin: 0; }
   .menu-main {
     top: 0;
     height: 53px; }
+    .menu-main .container, .menu-main .navbar-collapse {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .menu-main .container > .navbar-collapse {
+      margin-left: -20px;
+      margin-right: -20px; }
     .menu-main .brand {
       height: 23px; }
     .menu-main .navbar-brand {
       display: block;
-      padding: 15px 0; } }
+      padding: 15px 0; }
+    .menu-main ul.navbar {
+      padding: 0;
+      margin: 0; }
+      .menu-main ul.navbar li.content-menu {
+        display: block;
+        text-align: left;
+        padding: 13px 0; }
+        .menu-main ul.navbar li.content-menu.dropdown {
+          background: url("../images/icon/icon-down.png") 100% 10px/15px auto no-repeat; }
+        .menu-main ul.navbar li.content-menu a {
+          font-size: 14px; }
+  .navbar-toggle {
+    background: url("../images/icon/icon-bar.png") center/100% auto no-repeat;
+    margin: 12px 0 0 0; }
+  .navbar-collapse {
+    background-color: #1b2536; } }
 
 footer {
   margin-top: 5px; }

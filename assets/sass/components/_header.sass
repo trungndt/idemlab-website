@@ -38,8 +38,6 @@
 		a 
 			color: $white
 
-
-
 .menu-main
 	position: absolute
 	top: 37px
@@ -141,11 +139,38 @@
 	// 		font-size: 26px
 
 @include respondTo(tabletPortrait)
+	.container > .navbar-header
+		margin: 0
+	
+
 	.menu-main
 		top: 0
 		height: $navHeightMobile
+		.container, .navbar-collapse
+			padding-left: 20px
+			padding-right: 20px
+		.container>.navbar-collapse
+			margin-left: -20px
+			margin-right: -20px
 		.brand
 			height: 23px
 		.navbar-brand
 			display: block
 			padding: 15px 0
+		ul.navbar
+			padding: 0
+			margin: 0
+			li.content-menu
+				display: block
+				text-align: left
+				padding: 13px 0
+				&.dropdown 
+					@include bgImage('../images/icon/icon-down.png', 100% 10px, 15px auto)
+				a
+					font-size: 14px
+	
+	.navbar-toggle
+		@include bgImage('../images/icon/icon-bar.png', center, 100% auto)
+		margin: 12px 0 0 0
+	.navbar-collapse
+		background-color: $color-secondary

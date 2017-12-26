@@ -34,11 +34,12 @@
     
     %nav.menu-main
       .container
-        %button.navbar-toggle.collapsed{type:"button", data-toggle:"collapse",data-target:"#bs-example-navbar-collapse-1",aria-expanded:"false"}
-        .navbar-brand.brand
-          %a{href:"/"}
-                %img.logo{src:"assets/images/logo/logo-white.svg"}
-        .collapse.navbar-collapse
+        .navbar-header
+          %button.navbar-toggle.collapsed{type:"button", data-toggle:"collapse",data-target:"#navbar-collapse",aria-expanded:"false"}
+          .navbar-brand.brand
+            %a{href:"/"}
+                  %img.logo{src:"assets/images/logo/logo-white.svg"}
+        .collapse.navbar-collapse#navbar-collapse
           %ul.navbar
             %li.content-menu.dropdown{role:"presentation"}
               %a.dropdown-toggle{herf:"#", data-toggle:"dropdown", role:"button", aria-haspopup:"true", aria-expanded:"false"} Solutions 
