@@ -46,7 +46,7 @@
 	left: 0
 	width: 100%
 	height: $navHeight
-	z-index: 100
+	z-index: 98
 	@include transition
 	ul.navbar
 		text-align: center
@@ -86,6 +86,11 @@
 			bottom: 100%
 			left: 50%
 			@include prefix(transform, translateX(-50%))
+		&>li
+			padding: 0
+			&>a
+				line-height: 1
+				padding: 10px 20px
 
 	.open > .dropdown-menu
 		@include prefix(transform, scale(1, 1) translateX(-50%))
@@ -97,6 +102,7 @@
 	background-color: $color-secondary
 	position: fixed
 	top: 0
+	z-index: 100
 	&.nav-hide
 		top: -$navHeight
 	

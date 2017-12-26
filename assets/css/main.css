@@ -1159,8 +1159,6 @@ img {
     border-radius: 28px; } }
 
 @media (min-width: 1200px) {
-  .container {
-    width: 74%; }
   .text-content {
     width: 60%; } }
 
@@ -1178,7 +1176,7 @@ img {
   .none {
     display: none; }
   .bg-oval {
-    background: url("../images/oval/mobile-oval.png") top left/95% no-repeat; }
+    background: url("../images/oval/mobile-oval.png") top left/98% no-repeat; }
   .text-content {
     display: table;
     width: 90%; }
@@ -1247,7 +1245,7 @@ img {
   left: 0;
   width: 100%;
   height: 75px;
-  z-index: 100;
+  z-index: 98;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -1319,6 +1317,11 @@ img {
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%); }
+    .menu-main .dropdown-menu > li {
+      padding: 0; }
+      .menu-main .dropdown-menu > li > a {
+        line-height: 1;
+        padding: 10px 20px; }
   .menu-main .open > .dropdown-menu {
     -webkit-transform: scale(1, 1) translateX(-50%);
     -moz-transform: scale(1, 1) translateX(-50%);
@@ -1331,7 +1334,8 @@ img {
 .menu-main.fixed {
   background-color: #1b2536;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
   .menu-main.fixed.nav-hide {
     top: -75px; }
   .menu-main.fixed .navbar-brand {

@@ -87,7 +87,7 @@
                       %label{for:"name"} Your name
                   .form-group
                     .form-item
-                      %input.form-control.character-input{type:"text"}
+                      %input.form-control.character-input{type:"email"}
                       %label{for:"email"} Email address
                   .form-group
                     .form-item
@@ -140,16 +140,18 @@
               %p Subscribe to get updated with our latest release and products.
             .col-md-7
               %input{placeholder: "Enter your email address"}
-              %p.no-spam We respect your inbox, no spam!
-              %a.btn.btn-main.btn-next{href:"#"} SUBSCRIBE
+              .subscribe-footer
+                .msg-default
+                  %p.no-spam We respect your inbox, no spam!
+                  %a.btn.btn-main.btn-next#btnSubscribe{href:"#"} SUBSCRIBE
+                .msg-success
+                  %p Thank you for subscribing to our newsletter!
       #info-footer
         .container.text-center
             .row.margin-bottom.text-left
               .col-md-4
                 .img
                   %img.logo{src:"assets/images/logo/logo-blue.png"}
-                %a.btn.btn-info-bordered.btn-next.none{href:"#"} SIGN UP FREE
-                %a.btn.btn-info-bordered.btn-next.none-destop{href:"#"} SIGN UP
               .col-md-2.col-xs-6.menu-tab
                 %p IDEM SOLUTIONS
                 %a{href:"#"} IdemEvents

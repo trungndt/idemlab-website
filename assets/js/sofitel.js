@@ -54,8 +54,8 @@
         });
       };
 
-      General.setupFormValidation = function(formId) {
-        var $form, errorMarkElemSelector, showSuccessForm, validateFormElements;
+      General.setupFormValidation = function(formId, callback) {
+        var $form, errorMarkElemSelector, validateFormElements;
         $form = $(formId);
         errorMarkElemSelector = formId + ' input, ' + formId + ' textarea';
         $(document).on('blur', errorMarkElemSelector, function() {
@@ -78,7 +78,9 @@
         });
         $(document).on('submit', formId, function(e) {
           e.preventDefault();
-          showSuccessForm();
+          if ($form.data('valid') === true && (callback != null)) {
+            callback();
+          }
         });
         validateFormElements = function() {
           var valid;
@@ -90,20 +92,24 @@
             $form.find('.nice-select').removeClass('error');
           }
           $.each($form.find('input, textarea'), function(i, e) {
+            console.log($(e).next().html());
             if ($(e).val() === '') {
-              console.log($(e).is(':focus'));
               $(e).closest('.form-item').addClass('error-mark');
-              valid = false;
+              console.log($(e).next().html() + ' not null');
+              return valid = false;
+            } else if ($(e).attr('type') === 'email' && $(e).val().indexOf('@') < 0) {
+              $(e).closest('.form-item').addClass('error-mark');
+              console.log($(e).next().html() + ' invalid email');
+              return valid = false;
+            } else if ($(e).attr('type') === 'phone' && isNaN($(e).val())) {
+              $(e).closest('.form-item').addClass('error-mark');
+              console.log($(e).next().html() + ' invalid phone');
+              return valid = false;
             } else {
-              $(e).closest('.form-item').removeClass('error-mark');
+              return $(e).closest('.form-item').removeClass('error-mark');
             }
-            return console.log('-----------------------');
           });
           return valid;
-        };
-        showSuccessForm = function() {
-          $('#sectionFormDefault').hide();
-          $('#sectionFormSuccess').show();
         };
       };
 
@@ -139,20 +145,34 @@
 
     })();
     Contact = (function() {
+      var showSuccessForm;
+
       function Contact() {}
 
       Contact.init = function() {
-        General.setupFormValidation('#formContact');
+        General.setupFormValidation('#formContact', showSuccessForm);
+      };
+
+      showSuccessForm = function() {
+        $('#sectionFormDefault').hide();
+        $('#sectionFormSuccess').show();
       };
 
       return Contact;
 
     })();
     SignUp = (function() {
+      var showSuccessForm;
+
       function SignUp() {}
 
       SignUp.init = function() {
-        General.setupFormValidation('#formSignUp');
+        General.setupFormValidation('#formSignUp', showSuccessForm);
+      };
+
+      showSuccessForm = function() {
+        $('#sectionFormDefault').hide();
+        $('#sectionFormSuccess').show();
       };
 
       return SignUp;
