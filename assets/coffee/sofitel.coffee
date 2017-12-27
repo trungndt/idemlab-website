@@ -79,7 +79,7 @@ $ ->
 			$(document).on 'submit', formId, (e) ->
 				e.preventDefault()
 				if ($form.data('valid') == true && callback?)
-					do callback
+					callback($form)
 				return
 
 			validateFormElements = ->
@@ -148,9 +148,11 @@ $ ->
 			General.setupFormValidation('#formSignUp', showSuccessForm)
 			return
 
-		showSuccessForm = ->
+		showSuccessForm = ($form) ->
+			console.log($form)
+			$successPanel = $('#sectionFormSuccess')
 			$('#sectionFormDefault').hide()
-			$('#sectionFormSuccess').show()
+			$successPanel.show()
 			return
 
 	do General.init

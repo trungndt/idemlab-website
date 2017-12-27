@@ -4,7 +4,6 @@
     %meta{charset:"utf-8"}
     %meta{content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name:"viewport"}
     %link{href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Noto+Serif|Rubik:400,500", rel:"stylesheet"}
-    %link{href:"assets/plugins/jquery-ui/jquery-ui.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/nice-select/css/nice-select.css", rel:"stylesheet", type:"text/css"}
     %link{href:"assets/plugins/tel-input/css/intlTelInput.css", rel:"stylesheet", type:"text/css"}
@@ -75,9 +74,10 @@
           .col-md-6
             .featrue
               .inner
-                %label IdemGroup
-                %p Manage group reservations the easy way
-                %hr.gradient
+                .heading
+                  %label IdemGroup
+                  %p Manage group reservations the easy way
+                  %hr.gradient
                 %table
                   %tr
                     %td
@@ -102,9 +102,10 @@
           .col-md-6
             .featrue
               .inner.right-table
-                %label IdemEvents
-                %p Engage with your guests in meaningful ways
-                %hr.gradient
+                .heading
+                  %label IdemEvents
+                  %p Engage with your guests in meaningful ways
+                  %hr.gradient
                 %p.text-left As with all Idem Labs customers, you will also receive:
                 %table
                   %tr
@@ -121,60 +122,64 @@
                     %td
         %h3 Get Started
         %p.sub-heading.margin-bottom Learn how the Idem solutions can help your hotel. Fill in this form and our sales representative will set up a Free Trial for you.
-        %form.group-form#formSignUp
-          .inner-form
-            #sectionFormDefault
-              .form-group
-                .form-item
-                  %input.form-control.character-input{type:"text", placeholder:"Your name"}
-              .form-group
-                .row
-                  .col-sm-6
-                    .form-item
-                      %input.form-control.character-input{type:"email", placeholder:"Email address"}
-                  .col-sm-6
-                    .form-item
-                      %input.tel-input{type:"phone", placeholder:"Phone Number"}
-              .form-group
-                .row
-                  .col-sm-6
-                    .form-item
-                      %input.form-control.character-input{type:"text", placeholder:"Property name"}
-                  .col-sm-6
-                    .form-item
-                      %input.form-control.character-input{type:"text", placeholder:"No. of rooms"}
-              .form-group
-                %select.nice-select.character-input.select-featrue
-                  %option{selected:"selected",disabled:"disabled"} Select your country
-                  %option{value:""} Singapore
-                  %option{value:""} USA
-                  %option{value:""} Vietnam
-              %hr.gradient
-              .form-group
-                .text-left
-                  %p Select the product(s) you would like to sign up for:
-                  .checkbox
-                    %input.nice-check.nice-check-sm#chkSignUpIdemGroup{type:"checkbox"} 
-                    %label{for:"chkSignUpIdemGroup"}
-                      IdemGroup
-                  .checkbox
-                    %input.nice-check.nice-check-sm#chkSignUpIdemEvents{type:"checkbox"} 
-                    %label{for:"chkSignUpIdemEvents"}
-                      IdemEvents
-              .form-group
-                %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
-              .form-group
-                %button.btn.btn-main.btn-disables.btn-next{type:"submit"} SUBMIT MESSAGE
+        %form.form-block#formSignUp
+          #sectionFormDefault
+            .form-group
+              .form-item
+                %input.form-control.character-input{type:"text", placeholder:"Your name"}
+            .row
+              .col-sm-6
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"email", placeholder:"Email address"}
+              .col-sm-6
+                .form-group
+                  .form-item
+                    %input.tel-input{type:"phone", placeholder:"Phone Number"}
+            .row
+              .col-sm-6
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"text", placeholder:"Property name"}
+              .col-sm-6
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"text", placeholder:"No. of rooms"}
+            .form-group
+              %select.nice-select.character-input.select-featrue
+                %option{selected:"selected",disabled:"disabled"} Select your country
+                %option{value:""} Singapore
+                %option{value:""} USA
+                %option{value:""} Vietnam
+            %hr.gradient
+            .form-group
+              .text-left
+                %p Select the product(s) you would like to sign up for:
+                .checkbox
+                  %input.nice-check.nice-check-sm#chkSignUpIdemGroup{type:"checkbox"} 
+                  %label{for:"chkSignUpIdemGroup"}
+                    IdemGroup
+                .checkbox
+                  %input.nice-check.nice-check-sm#chkSignUpIdemEvents{type:"checkbox"} 
+                  %label{for:"chkSignUpIdemEvents"}
+                    IdemEvents
+            .form-group
+              %textarea.form-control.character-input{type:"text", placeholder:"Comments…", rows:"4"}
+            .form-group
+              %button.btn.btn-main.btn-disables.btn-next{type:"submit"} SIGN ME UP
 
-            #sectionFormSuccess.submit-done{style:"display:none"}
-              .img.title
-                %img{src:"assets/images/icon/icon-successful.png"}
-              %p Thank you for your enquiry! We will be in contact with you at
-                %br 
-                %a{href:"#"} email@domain.com &nbsp   
-                very soon. 
-              %a.btn.btn-main.btn-next.none{href:"/"}
-                GO TO HOME
+          #sectionFormSuccess.submit-done{style:"display:none"}
+            .img.title
+              %img{src:"assets/images/icon/icon-successful.png"}
+            %p.mb-20
+              Thank you 
+              %span.guest-name
+                Chep Chep
+              ! Our sales representative will be in contact with you at&nbsp;
+              %a{href:"#"} email@domain.com
+              &nbsp;very soon. 
+            %a.btn.btn-main.btn-next.none{href:"/"}
+              GO TO HOME
 
   %footer
     #subscribe
@@ -226,7 +231,6 @@
           %p.copyright Copyright © 2017 Idem Labs Pte. Ltd.
 
 %script{src:"assets/js/jquery-1.9.1.js", type:"text/javascript"}
-%script{src:"assets/plugins/jquery-ui/jquery-ui.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/timepicker/jquery.timepicker.min.js", type:"text/javascript"}
 %script{src:"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", type:"text/javascript"}
 %script{src:"assets/plugins/nice-select/js/jquery.nice-select.min.js", type:"text/javascript"}

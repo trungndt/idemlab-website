@@ -84,7 +84,7 @@
         $(document).on('submit', formId, function(e) {
           e.preventDefault();
           if ($form.data('valid') === true && (callback != null)) {
-            callback();
+            callback($form);
           }
         });
         validateFormElements = function() {
@@ -166,9 +166,12 @@
         General.setupFormValidation('#formSignUp', showSuccessForm);
       };
 
-      showSuccessForm = function() {
+      showSuccessForm = function($form) {
+        var $successPanel;
+        console.log($form);
+        $successPanel = $('#sectionFormSuccess');
         $('#sectionFormDefault').hide();
-        $('#sectionFormSuccess').show();
+        $successPanel.show();
       };
 
       return SignUp;

@@ -812,11 +812,50 @@ input:focus, select:focus, button:focus, a:focus, .btn:focus {
   color: #999999;
   display: none; }
 
+.nice-select .current {
+  color: #999; }
+
 .nice-select.error .current {
   color: #FC665C; }
 
 .form-group {
   margin-bottom: 30px; }
+
+.form-block {
+  padding: 40px 80px;
+  background: #FFF;
+  margin-top: 50px;
+  box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3);
+  border-radius: 7px;
+  color: #777777;
+  text-align: center; }
+
+.form-item {
+  display: block;
+  position: relative;
+  border-radius: 25px;
+  background-color: #fff; }
+  .form-item.error-mark {
+    background-color: #fff;
+    background: url("../images/icon/icon-error.png") right 15px top 19px/12px auto no-repeat #fff; }
+  .form-item .form-control, .form-item .intl-tel-input.allow-dropdown {
+    background-color: transparent; }
+  .form-item label {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    color: #999999;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 3px;
+    transition: all 0.2s ease-in-out; }
+  .form-item input:focus + label,
+  .form-item input.not-empty + label {
+    text-transform: uppercase;
+    top: -7px;
+    background: #FFF;
+    transition: all 0.2s ease-in-out;
+    color: #0095ff; }
 
 .character-input, .intl-tel-input.allow-dropdown {
   border-radius: 25px;
@@ -826,16 +865,8 @@ input:focus, select:focus, button:focus, a:focus, .btn:focus {
   height: 52px;
   position: relative; }
   .character-input.select-featrue, .select-featrue.intl-tel-input.allow-dropdown {
-    padding: 5px 20px; }
-
-.form-item {
-  border-radius: 25px;
-  background-color: #fff; }
-  .form-item.error-mark {
-    background-color: #fff;
-    background: url("../images/icon/icon-error.png") right 15px top 19px/12px auto no-repeat #fff; }
-  .form-item .form-control, .form-item .intl-tel-input.allow-dropdown {
-    background-color: transparent; }
+    float: none;
+    line-height: 1; }
 
 .btn-active {
   border: 1px solid #0095ff; }
@@ -963,6 +994,22 @@ textarea.form-control, textarea.intl-tel-input.allow-dropdown {
       font-size: 12px; }
 
 @media (max-width: 992px) {
+  .form-block {
+    padding: 30px 15px; }
+  .form-group {
+    margin-bottom: 24px; }
+  .form-item.error-mark {
+    background-position: right 15px top 13px; }
+  .character-input, .intl-tel-input.allow-dropdown {
+    height: 39px;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 10px 20px; }
+    .character-input.nice-select .current, .nice-select.intl-tel-input.allow-dropdown .current {
+      font-size: 13px; }
+  .intl-tel-input.allow-dropdown input {
+    line-height: 1;
+    padding-left: 40px; }
   .btn {
     font-size: 14.5px; } }
 
@@ -1210,8 +1257,6 @@ img {
     width: 84%;
     letter-spacing: .4;
     line-height: 1.45; }
-  .character-input, .intl-tel-input.allow-dropdown {
-    padding: 10px; }
   .btn-disables {
     margin: 0 0 50px; }
   .top-content {
@@ -1862,33 +1907,6 @@ footer {
   #contact .content {
     width: 74%;
     margin: auto; }
-  #contact .form-content {
-    background: #FFF;
-    margin-top: 50px;
-    box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3);
-    border-radius: 7px;
-    color: #424242; }
-    #contact .form-content .form-item {
-      display: block;
-      position: relative; }
-      #contact .form-content .form-item label {
-        position: absolute;
-        top: 30%;
-        left: 20px;
-        color: #999999;
-        font-weight: normal;
-        margin: 0;
-        padding: 0 3px;
-        transition: all 0.2s ease-in-out; }
-      #contact .form-content .form-item input:focus + label,
-      #contact .form-content .form-item input.not-empty + label {
-        text-transform: uppercase;
-        top: -7px;
-        background: #FFF;
-        transition: all 0.2s ease-in-out;
-        color: #0095ff; }
-    #contact .form-content .inner-form {
-      padding: 40px 80px 20px; }
   #contact .text-center > .inner {
     margin-top: 40px; }
   #contact .inner p {
@@ -2263,7 +2281,9 @@ footer {
   #sign-up .featrue p {
     font-size: 12px;
     letter-spacing: .3px; }
-  #sign-up .featrue label {
+  #sign-up .featrue .heading p {
+    font-size: 14px; }
+  #sign-up .featrue .heading label {
     font-size: 22px;
     line-height: 1.5;
     letter-spacing: 0.6px;
@@ -2272,40 +2292,9 @@ footer {
   #sign-up .featrue .inner {
     padding: 30px; }
 
-#sign-up .group-form {
-  background: #FFF;
-  border-radius: 7px;
-  box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3); }
-
-#sign-up .inner-form {
-  width: 620px;
-  max-width: 90%;
-  margin: auto;
-  padding: 40px 0 60px; }
-
-#sign-up .input-group {
-  padding: 12px; }
-  #sign-up .input-group input {
-    border: none; }
-
 #sign-up .nice-check + label {
   margin-bottom: 10px;
   font-size: 16px; }
-
-#sign-up .left, #sign-up .right {
-  width: 48%; }
-
-#sign-up .left {
-  margin-right: 2%; }
-
-#sign-up .right {
-  margin-left: 2%; }
-
-.select-featrue {
-  width: 100%;
-  float: none;
-  padding: 10px;
-  height: 52px; }
 
 @media (min-width: 1200px) {
   #sign-up .container.container-sm {

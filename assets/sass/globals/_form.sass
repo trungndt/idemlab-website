@@ -31,11 +31,52 @@ input, select, button, a, .btn
 		background: transparent
 		color: $disable
 		display: none
+	.current
+		color: #999
 	&.error .current
 		color: $color-danger
+
+
 // Form
 .form-group
 	margin-bottom: 30px
+.form-block
+	padding: 40px 80px
+	background: $white
+	margin-top: 50px
+	box-shadow: 0 2px 15px 2px rgba(203, 209, 214, 0.3);
+	border-radius: 7px
+	color: $color-default
+	text-align: center
+
+.form-item
+	display: block
+	position: relative
+	border-radius: 25px
+	background-color: #fff
+	&.error-mark
+		background-color: #fff
+		@include bgImage('../images/icon/icon-error.png', right 15px top 19px, 12px auto, no-repeat #fff)
+	.form-control
+		background-color: transparent
+	label 
+		position: absolute
+		top: 30%
+		left: 20px
+		color: $disable
+		font-weight: normal
+		margin: 0
+		padding: 0 3px
+		transition: all 0.2s ease-in-out;
+	input
+		&:focus + label,
+		&.not-empty + label
+			text-transform: uppercase
+			top: -7px
+			background: $white
+			transition: all 0.2s ease-in-out
+			color: $blue
+		
 
 .character-input
 	border-radius: 25px
@@ -45,18 +86,8 @@ input, select, button, a, .btn
 	height: 52px
 	position: relative
 	&.select-featrue
-		padding: 5px 20px
-
-.form-item
-	border-radius: 25px
-	// &.form-item-white
-	// 	border-radius: 25px
-	background-color: #fff
-	&.error-mark
-		background-color: #fff
-		@include bgImage('../images/icon/icon-error.png', right 15px top 19px, 12px auto, no-repeat #fff)
-	.form-control
-		background-color: transparent
+		float: none
+		line-height: 1
 
 // Buttons
 .btn-active
@@ -203,6 +234,23 @@ textarea.form-control
 		span
 			font-size: 12px
 
-@media (max-width: 992px) 
+@include respondTo(tabletPortrait)
+	.form-block
+		padding: 30px 15px
+	.form-group
+		margin-bottom: 24px
+	.form-item
+		&.error-mark
+			background-position: right 15px top 13px
+	.character-input
+		height: 39px
+		font-size: 13px
+		border-radius: 20px
+		padding: 10px 20px
+		&.nice-select .current
+			font-size: 13px
+	.intl-tel-input.allow-dropdown input
+		line-height: 1
+		padding-left: 40px
 	.btn 
 		font-size: $font-size-mb

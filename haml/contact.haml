@@ -71,45 +71,44 @@
         %p Drop us a message, we would love to hear from you!
         .row
           .col-md-8
-            .form-content.text-center
-              %form.inner-form#formContact
-                #sectionFormDefault
-                  .form-group
-                    .form-item
-                      %select#subject.nice-select.character-input.select-featrue
-                        %option{value:"-1",selected:"selected",disabled:"disabled"} Select a subject
-                        %option{value:"Sales"} Sales
-                        %option{value:"Media"} Media
-                        %option{value:"Apply for Partnership"} Apply for Partnership
-                  .form-group
-                    .form-item
-                      %input.form-control.character-input{type:"text"}
-                      %label{for:"name"} Your name
-                  .form-group
-                    .form-item
-                      %input.form-control.character-input{type:"text"}
-                      %label{for:"email"} Email address
-                  .form-group
-                    .form-item
-                      %input.form-control.character-input{type:"text"}
-                      %label{for:"company"} Company name
-                  .form-group.mb-40
-                    .form-item
-                      %textarea.form-control.character-input{type:"text", placeholder:"Your message…", rows:"5"}
-                  .form-group
-                    %button.btn.btn-main.btn-disables.btn-next{type:"submit"}
-                      SUBMIT MESSAGE
-                
-                #sectionFormSuccess.submit-done{style:"display:none"}
-                  .img.title
-                    %img{src:"assets/images/icon/icon-successful.png"}
-                  %p Thank you for your enquiry! We will be in contact with you at
-                    %br 
-                    %a{href:"#"} email@domain.com &nbsp   
-                    very soon. 
-                  %a.btn.btn-main.btn-next.none{href:"/"}
-                    GO TO HOME
-          
+            %form.form-block#formContact
+              #sectionFormDefault
+                .form-group
+                  .form-item
+                    %select#subject.nice-select.character-input.select-featrue
+                      %option{value:"-1",selected:"selected",disabled:"disabled"} Select a subject
+                      %option{value:"Sales"} Sales
+                      %option{value:"Media"} Media
+                      %option{value:"Apply for Partnership"} Apply for Partnership
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"text"}
+                    %label{for:"name"} Your name
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"text"}
+                    %label{for:"email"} Email address
+                .form-group
+                  .form-item
+                    %input.form-control.character-input{type:"text"}
+                    %label{for:"company"} Company name
+                .form-group.mb-40
+                  .form-item
+                    %textarea.form-control.character-input{type:"text", placeholder:"Your message…", rows:"5"}
+                .form-group
+                  %button.btn.btn-main.btn-disables.btn-next{type:"submit"}
+                    SUBMIT MESSAGE
+              
+              #sectionFormSuccess.submit-done{style:"display:none"}
+                .img.title
+                  %img{src:"assets/images/icon/icon-successful.png"}
+                %p.mb-20
+                  Thank you for your enquiry! We will be in contact with you at&nbsp;
+                  %a{href:"#"} email@domain.com
+                  &nbsp;very soon. 
+                %a.btn.btn-main.btn-next.none{href:"/"}
+                  GO TO HOME
+        
           .col-md-4.text-center
             .inner.text-content
               .icon.title
