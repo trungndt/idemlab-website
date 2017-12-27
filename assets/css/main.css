@@ -813,7 +813,7 @@ input:focus, select:focus, button:focus, a:focus, .btn:focus {
   display: none; }
 
 .nice-select.error .current {
-  color: #FF8303; }
+  color: #FC665C; }
 
 .form-group {
   margin-bottom: 30px; }
@@ -833,7 +833,7 @@ input:focus, select:focus, button:focus, a:focus, .btn:focus {
   background-color: #fff; }
   .form-item.error-mark {
     background-color: #fff;
-    background: url("../images/icon/icon-dissable.png") right 15px top 13px/24px 24px no-repeat #fff; }
+    background: url("../images/icon/icon-error.png") right 15px top 19px/12px auto no-repeat #fff; }
   .form-item .form-control, .form-item .intl-tel-input.allow-dropdown {
     background-color: transparent; }
 
@@ -1044,6 +1044,14 @@ img {
 
 .img-responsive {
   width: 100%; }
+
+.sub-heading {
+  color: #777777;
+  letter-spacing: .6px;
+  width: 760px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .hide-md {
   display: none; }
@@ -1879,8 +1887,6 @@ footer {
         background: #FFF;
         transition: all 0.2s ease-in-out;
         color: #0095ff; }
-      #contact .form-content .form-item .nice-select.error span {
-        color: #FF8303; }
     #contact .form-content .inner-form {
       padding: 40px 80px 20px; }
   #contact .text-center > .inner {
@@ -2237,10 +2243,6 @@ footer {
 
 #sign-up h3 {
   margin-top: 80px; }
-
-#sign-up .sub-heading {
-  color: #777777;
-  letter-spacing: .6px; }
 
 #sign-up tr > td:first-child {
   width: 20%; }
