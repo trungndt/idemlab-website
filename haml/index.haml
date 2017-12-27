@@ -235,13 +235,13 @@
               %h3 Stay in the loop
               %p Subscribe to get updated with our latest release and products.
             .col-md-7
-              %form
-                .form-item
-                  %input{placeholder: "Enter your email address"}
+              %form#formSubscribe
+                .form-item.form-item-white
+                  %input.form-control.character-input{type:"email",placeholder: "Enter your email address"}
                 .subscribe-footer
                   .msg-default
                     %p.no-spam We respect your inbox, no spam!
-                    %a.btn.btn-main.btn-next#btnSubscribe{href:"#"} SUBSCRIBE
+                    %button.btn.btn-main.btn-next#btnSubscribe{type:"submit"} SUBSCRIBE
                   .msg-success
                     %p Thank you for subscribing to our newsletter!
       #info-footer

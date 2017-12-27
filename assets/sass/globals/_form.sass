@@ -1,4 +1,4 @@
-input, select, button
+input, select, button, a, .btn
 	&:focus
 		outline: none !important
 
@@ -48,8 +48,13 @@ input, select, button
 		padding: 5px 20px
 
 .form-item
+	border-radius: 25px
+	// &.form-item-white
+	// 	border-radius: 25px
+	background-color: #fff
 	&.error-mark
-		@include bgImage('../images/icon/icon-dissable.png', right 15px top 13px, 24px 24px)
+		background-color: #fff
+		@include bgImage('../images/icon/icon-dissable.png', right 15px top 13px, 24px 24px, no-repeat #fff)
 	.form-control
 		background-color: transparent
 

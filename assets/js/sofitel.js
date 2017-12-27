@@ -2,6 +2,8 @@
   $(function() {
     var Contact, General, Homepage, SignUp;
     General = (function() {
+      var handleSubscribeForm;
+
       function General() {}
 
       General.init = function() {
@@ -29,6 +31,7 @@
         $('.nice-select').niceSelect();
         General.setupFixedNavbar();
         General.setupTelInput();
+        General.setupFormValidation('#formSubscribe', handleSubscribeForm);
       };
 
       General.setupFixedNavbar = function() {
@@ -94,25 +97,30 @@
             $form.find('.nice-select').removeClass('error');
           }
           $.each($form.find('input, textarea'), function(i, e) {
-            console.log($(e).next().html());
             if ($(e).val() === '') {
               $(e).closest('.form-item').addClass('error-mark');
-              console.log($(e).next().html() + ' not null');
-              return valid = false;
+              valid = false;
             } else if ($(e).attr('type') === 'email' && $(e).val().indexOf('@') < 0) {
               $(e).closest('.form-item').addClass('error-mark');
-              console.log($(e).next().html() + ' invalid email');
-              return valid = false;
+              valid = false;
             } else if ($(e).attr('type') === 'phone' && isNaN($(e).val())) {
               $(e).closest('.form-item').addClass('error-mark');
-              console.log($(e).next().html() + ' invalid phone');
-              return valid = false;
+              valid = false;
             } else {
-              return $(e).closest('.form-item').removeClass('error-mark');
+              $(e).closest('.form-item').removeClass('error-mark');
             }
           });
           return valid;
         };
+      };
+
+      handleSubscribeForm = function() {
+        $('.msg-default').hide();
+        $('.msg-success').show();
+        setTimeout(function() {
+          $('.msg-default').show();
+          return $('.msg-success').hide();
+        }, 2000);
       };
 
       General.setupTelInput = function() {
@@ -127,21 +135,7 @@
     Homepage = (function() {
       function Homepage() {}
 
-      Homepage.init = function() {
-        this.handleSubscribeForm();
-      };
-
-      Homepage.handleSubscribeForm = function() {
-        $(document).on('click', '#btnSubscribe', function(e) {
-          e.preventDefault();
-          $('.msg-default').hide();
-          $('.msg-success').show();
-          setTimeout(function() {
-            $('.msg-default').show();
-            return $('.msg-success').hide();
-          }, 2000);
-        });
-      };
+      Homepage.init = function() {};
 
       return Homepage;
 

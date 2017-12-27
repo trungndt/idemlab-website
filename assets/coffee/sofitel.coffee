@@ -28,6 +28,8 @@ $ ->
 			$('.nice-select').niceSelect()
 			do General.setupFixedNavbar
 			do General.setupTelInput
+
+			General.setupFormValidation('#formSubscribe', handleSubscribeForm)
 			return
 
 		@setupFixedNavbar: ->
@@ -91,25 +93,32 @@ $ ->
 				# console.log($form.find('input, textarea'))
 
 				$.each $form.find('input, textarea'), (i,e) ->
-					console.log($(e).next().html())
-					# console.log($form.find('input, textarea'))
 					if ($(e).val() == '')
 						$(e).closest('.form-item').addClass('error-mark')
-						console.log($(e).next().html() + ' not null')
 						valid = false
 					else if ($(e).attr('type') == 'email' && $(e).val().indexOf('@') < 0)
 						$(e).closest('.form-item').addClass('error-mark')
-						console.log($(e).next().html() + ' invalid email')
 						valid = false
 					else if ($(e).attr('type') == 'phone' && isNaN($(e).val()))
 						$(e).closest('.form-item').addClass('error-mark')
-						console.log($(e).next().html() + ' invalid phone')
 						valid = false
 					else 
 						$(e).closest('.form-item').removeClass('error-mark')
+					return
 
 				valid
 			
+			return
+
+		handleSubscribeForm = ->
+			$('.msg-default').hide()
+			$('.msg-success').show()
+
+			setTimeout () ->
+				$('.msg-default').show()
+				$('.msg-success').hide()
+			,
+				2000
 			return
 
 		@setupTelInput: ->
@@ -120,20 +129,6 @@ $ ->
 
 	class Homepage
 		@init: ->
-			do this.handleSubscribeForm
-			return
-		@handleSubscribeForm: ->
-			$(document).on 'click', '#btnSubscribe', (e) ->
-				e.preventDefault()
-				$('.msg-default').hide()
-				$('.msg-success').show()
-
-				setTimeout () ->
-					$('.msg-default').show()
-					$('.msg-success').hide()
-				,
-					2000
-				return
 			return
 
 	
